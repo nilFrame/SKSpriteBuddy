@@ -1,0 +1,6 @@
+framework module SKInkAnimator {
+  umbrella header "SKInkAnimator-umbrella.h"
+
+  export *
+  module * { export * }
+}
