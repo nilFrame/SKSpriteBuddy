@@ -18,6 +18,8 @@ public class IAEntity: SKNode {
 
     var size: CGSize
     private var document: AEXMLDocument
+    private var loadedSkins = [String : IASkin]()
+    private var info = [NSUUID : String]()
     
     //
     // MARK: - Initializers
@@ -69,6 +71,7 @@ public class IAEntity: SKNode {
             self.addChild(node)
         }
         
+        try self.loadEntityInfo()
         try self.setSkin(named: skinName)
     }
     
@@ -76,83 +79,115 @@ public class IAEntity: SKNode {
     // NARK: - Skins stack
     //
 
-    public func setSkin(named name: String) throws {
+    private func loadEntityInfo() throws {
+        
+        let skinsElement = document.root[IAXMLConstants.skinsElement]
+        let entityInfoElement = skinsElement[IAXMLConstants.entityInfoElement]
+        
+        for boneElement in entityInfoElement.children {
+            
+            guard let uuidString = boneElement.attributes[IAXMLConstants.uuidAttribute], let uuid = NSUUID(uuidString: uuidString) else {
+                throw IAXMLParsingError.invalidAttribute(message: "Expected \"uuid\" attribute for bone element into entityInfo element")
+            }
+            
+            let textureElement = boneElement[IAXMLConstants.textureElement]
+            guard let textureName = textureElement.attributes[IAXMLConstants.nameAttribute] else {
+                throw IAXMLParsingError.invalidAttribute(message: "Expected \"name\" attribute for bone element into entityInfo element")
+            }
+            
+            self.info[uuid] = textureName
+        }
+    }
+    
+    public func setSkin(named skinName: String) throws {
+    
+        // get skin element into the xml document
+        if let preloadedSkin = loadedSkins[skinName] {
+            loadTextures(for: preloadedSkin)
+            
+        }else {
+            try self.preload(skinNamed: skinName) {
+                
+                guard let skin = self.loadedSkins[skinName] else {
+                    return
+                }
+                
+                self.loadTextures(for: skin)
+            }
+        }
+    }
+    
+    private func loadTextures(for skin: IASkin) {
+        self.enumerateChildNodes(withName: ".//*", using: { (node, stop) in
+            
+            // Select just entity children that was maded with InkAnimator
+            guard let iaNode = node as? IASpriteNode else {
+                return
+            }
+            
+            iaNode.isHidden = !(skin.nodesVisibility[iaNode.uuid] ?? false)
+            
+            // Sets texture for visible nodes in the skin
+            if let texture = skin.texturesForNodes[iaNode.uuid], !iaNode.isHidden {
+                iaNode.texture = texture
+            }
+        })
+    }
+    
+    private func xmlElement(for skinName: String) -> AEXMLElement? {
         
         let skinsElement = self.document.root[IAXMLConstants.skinsElement]
         
-        // get skin element into the xml document
-        guard let skin = skinsElement.children.filter({ (element) -> Bool in
+        guard let skinElement = skinsElement.children.filter({ (element) -> Bool in
             
-            if let nameAttribute = element.attributes[IAXMLConstants.nameAttribute], nameAttribute == name {
+            if let nameAttribute = element.attributes[IAXMLConstants.nameAttribute], nameAttribute == skinName {
                 return true
             }
             
             return false
             
         }).first else {
-            return
+            return nil
         }
         
-        var skinTextures = [NSUUID : SKTexture]()
-        
-        // Read the xml document and load textures for visible nodes
-        for boneInfo in skin.children {
-            
-            guard let uuidString = boneInfo.attributes[IAXMLConstants.uuidAttribute], let boneUUID = NSUUID(uuidString: uuidString) else {
-                throw IAXMLParsingError.invalidAttribute(message: "Expected \"uuid\" attribute")
-            }
-            
-            guard let visibilityString = boneInfo.attributes[IAXMLConstants.boneVisibilityAttribute], let visible = visibilityString.toBool() else {
-                throw IAXMLParsingError.invalidAttribute(message: "Expected \"isVisible\" attribute")
-            }
-            
-            if visible {
-                let texture = SKTexture(imageNamed: "\(name)_\(uuidString)_Texture")
-                skinTextures[boneUUID] = texture
-            }
+        return skinElement
+    }
+    
+    private func releaseSkin(named skinName: String) {
+        loadedSkins.removeValue(forKey: skinName)
+    }
+    
+    //
+    // MARK: - Entitty Preload stack
+    //
+    
+    public func preload(skinNamed skinName: String, completion: @escaping ()->()) throws {
+        guard let skinElement = self.xmlElement(for: skinName) else {
+            throw IAXMLParsingError.invalidXMLElement(message: "Skin named \(skinName) not found.")
         }
         
-        // Load textures in a background task
-        SKTexture.preload(Array(skinTextures.values)) {
+        let skin = try IASkin(xmlElement: skinElement, entityInfo: self.info)
+        
+        skin.preload {
+            self.loadedSkins[skinName] = skin
+            completion()
+        }
+    }
+    
+    public func preload(skins names: [String], completion: @escaping ()->()) throws {
+        
+        var counter = 0
+        
+        for skinName in names {
             
-            // walk through nodes and set the skin textures
-            self.enumerateChildNodes(withName: ".//*", using: { (node, stop) in
+            try self.preload(skinNamed: skinName, completion: {
                 
-                // Select just entity children that was maded with InkAnimator
-                guard let iaNode = node as? IASpriteNode else {
-                    return
-                }
-                
-                // Sets texture for visible nodes in the skin and hide the invisible ones
-                if let texture = skinTextures[iaNode.uuid] {
-                    iaNode.isHidden = false
-                    iaNode.texture = texture
-                    
-                }else {
-                    iaNode.isHidden = true
+                counter += 1
+                if counter == names.count {
+                    completion()
                 }
             })
         }
-    }
-    
-    private func setNode(_ node: IASpriteNode, visible: Bool) {
-        
-    }
-    
-    private func loadSkin(with xmlElement: AEXMLElement) {
-        
-    }
-    
-    //
-    // MARK: - Texture Preload stack
-    //
-    
-    public func preload(_ completion: ()->()) {
-        
-    }
-    
-    public func preload(skinNamed skinName: String, completion: ()->()) {
-        
     }
     
     //

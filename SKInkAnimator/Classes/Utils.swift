@@ -16,6 +16,8 @@ public enum IAXMLParsingError : Error {
 }
 
 public struct IAXMLConstants {
+    
+    // Node xml element parse
     static let xmlElement = "bone"
     static let entityElement = "entity"
     static let uuidAttribute = "uuid"
@@ -23,7 +25,6 @@ public struct IAXMLConstants {
     static let blendModeAttribute = "blendMode"
     static let alphaAttribute = "alpha"
     static let documentNameAttribute = "documentName"
-    static let boneVisibilityAttribute = "isVisible"
     
     static let positionElement = "position"
     static let zPositionElement = "zPosition"
@@ -32,10 +33,13 @@ public struct IAXMLConstants {
     static let rotationElement = "rotation"
     static let childrenElement = "children"
     
+    // Skins xml element parse
     static let skinsElement = "skins"
     static let skinElement = "skin"
+    static let entityInfoElement = "entityInfo"
+    static let textureElement = "texture"
     static let defaultSkinAttribute = "workingSkin"
-    static let bonesElement = "bones"
+    static let boneVisibilityAttribute = "isVisible"
 }
 
 public extension CGPoint {
