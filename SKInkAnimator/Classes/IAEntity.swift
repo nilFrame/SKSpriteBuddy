@@ -19,6 +19,7 @@ public class IAEntity: SKNode {
     var size: CGSize
     private var document: AEXMLDocument
     private var loadedSkins = [String : IASkin]()
+    private var loadedAnimations = [String : IAAnimation]()
     private var info = [NSUUID : String]()
     
     //
@@ -207,5 +208,82 @@ public class IAEntity: SKNode {
     
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    //
+    // MARK: - Animations stack
+    //
+    
+    public func run(animationNamed animationName: String) throws {
+        
+        if let animation = try self.animation(named: animationName) {
+            self.run(animation, times: 1)
+        }
+    }
+    
+    public func run(animationNamed animationName: String, times: Int) throws {
+        
+        if let animation = try self.animation(named: animationName) {
+            self.run(animation, times: times)
+        }
+    }
+    
+    public func runForever(animationNamed animationName: String) throws {
+        
+        if let animation = try self.animation(named: animationName) {
+            self.run(animation, times: -1)
+        }
+    }
+    
+    private func animation(named animationName: String) throws -> IAAnimation? {
+        
+        guard let animationElement = animationXMLElement(for: animationName) else {
+            return nil
+        }
+        
+        let animation = try IAAnimation(xmlElement: animationElement)
+        return animation
+    }
+    
+    private func animationXMLElement(for animationName: String) -> AEXMLElement? {
+        
+        let animationsElement = document.root[IAXMLConstants.animationsElement]
+        
+        guard let animationElement = animationsElement.children.filter({ (element) -> Bool in
+            
+            if let nameAttribute = element.attributes[IAXMLConstants.nameAttribute], nameAttribute == animationName {
+                return true
+            }
+            
+            return false
+            
+        }).first else {
+            return nil
+        }
+        
+        return animationElement
+    }
+    
+    public func preload(animationNamed animationName: String, completion: ()->()) {
+        
+    }
+    
+    private func run(_ animation: IAAnimation, times: Int) {
+        self.enumerateChildNodes(withName: ".//*", using: { (node, stop) in
+            
+            guard let iaNode = node as? IASpriteNode else {
+                return
+            }
+            
+            if let action = animation.actions[iaNode.uuid] {
+                node.removeAllActions()
+                
+                if times < 0 {
+                    node.run(SKAction.repeatForever(action))
+                }else {
+                    node.run(SKAction.repeat(action, count: times))
+                }
+            }
+        })
     }
 }

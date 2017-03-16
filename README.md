@@ -22,7 +22,7 @@ pod "SKInkAnimator"
 
 ## Author
 
-rafael.vrmoura@gmail.com, rafael.vrmoura@gmail.com
+rafael.vrmoura@gmail.com
 
 ## License
 

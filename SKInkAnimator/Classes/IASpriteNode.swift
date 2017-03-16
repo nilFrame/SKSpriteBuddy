@@ -23,7 +23,7 @@ public class IASpriteNode: SKSpriteNode {
         
         guard let uuidString = xmlElement.attributes[IAXMLConstants.uuidAttribute],
             let uuid = NSUUID(uuidString: uuidString) else {
-                throw IAXMLParsingError.invalidAttribute(message: "Expected \"uuid\" attribute")
+                throw IAXMLParsingError.invalidAttribute(message: "Expected \"uuid\" attribute in bone xml element")
         }
         
         guard let name = xmlElement.attributes[IAXMLConstants.nameAttribute] else {
@@ -32,12 +32,12 @@ public class IASpriteNode: SKSpriteNode {
         
         guard let blendModeString = xmlElement.attributes[IAXMLConstants.blendModeAttribute],
             let blendModeInt = Int(blendModeString), let blendMode = SKBlendMode(rawValue: blendModeInt) else {
-                throw IAXMLParsingError.invalidAttribute(message: "Expected \"blendMode\" attribute")
+                throw IAXMLParsingError.invalidAttribute(message: "Expected \"blendMode\" attribute in bone xml element")
         }
         
         guard let alphaString = xmlElement.attributes[IAXMLConstants.alphaAttribute],
             let alpha = Float(alphaString) else {
-                throw IAXMLParsingError.invalidAttribute(message: "Expected \"alpha\" attribute")
+                throw IAXMLParsingError.invalidAttribute(message: "Expected \"alpha\" attribute in bone xml element")
         }
         
         guard let position = CGPoint(xmlElement: xmlElement[IAXMLConstants.positionElement]) else {

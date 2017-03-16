@@ -6,7 +6,7 @@
 //
 //
 
-import UIKit
+import Foundation
 import AEXML
 import SpriteKit
 

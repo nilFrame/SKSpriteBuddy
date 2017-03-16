@@ -20,6 +20,7 @@ public struct IAXMLConstants {
     // Node xml element parse
     static let xmlElement = "bone"
     static let entityElement = "entity"
+    
     static let uuidAttribute = "uuid"
     static let nameAttribute = "name"
     static let blendModeAttribute = "blendMode"
@@ -38,8 +39,22 @@ public struct IAXMLConstants {
     static let skinElement = "skin"
     static let entityInfoElement = "entityInfo"
     static let textureElement = "texture"
+    
     static let defaultSkinAttribute = "workingSkin"
     static let boneVisibilityAttribute = "isVisible"
+    
+    // Animation xml element parse
+    static let scaleElement = "scale"
+    static let keyframeWrapperElement = "keyframeWrapper"
+    static let keyframeElement = "keyframe"
+    static let animationElement = "animation"
+    static let animationsElement = "animations"
+    
+    static let timingModeAttribute = "timingMode"
+    static let frameAttribute = "frame"
+    static let startFrameAttribute = "startFrame"
+    static let endFrameAttribute = "endFrame"
+    static let frameDurationAttribute = "frameDuration" 
 }
 
 public extension CGPoint {
