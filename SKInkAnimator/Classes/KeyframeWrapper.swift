@@ -39,7 +39,7 @@ class KeyframeWrapper: NSObject {
                     throw IAXMLParsingError.invalidAttribute(message: "Expected \"frame\" attribute in keyframe element.")
             }
             let keyframe = try Keyframe(xmlElement: child)
-            add(keyframe: keyframe, at: frame)
+            add(keyframe, at: frame)
         }
     }
     
