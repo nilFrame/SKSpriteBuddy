@@ -44,7 +44,6 @@ public class IAEntity: SKNode {
     public convenience init(withName name: String, andSkin skinName: String) throws {
         
         let document = try IAEntity.document(with: name)
-        let mainElement = document.root[IAXMLConstants.xmlElement]
         
         try self.init(xmlDocument: document, andSkin: skinName)
         

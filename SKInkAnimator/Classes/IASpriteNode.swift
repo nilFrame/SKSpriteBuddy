@@ -77,6 +77,7 @@ public class IASpriteNode: SKSpriteNode {
         self.anchorPoint = anchorPoint
         self.size = size
         self.zRotation = rotation
+        self.blendMode = blendMode
         
         for childElement in xmlElement[IAXMLConstants.childrenElement].children {
             self.addChild(try IASpriteNode(xmlElement: childElement))

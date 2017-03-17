@@ -43,7 +43,7 @@ class KeyframeWrapper: NSObject {
         }
     }
     
-    private func add(keyframe keyframe: Keyframe, at frame: Int) {
+    private func add(_ keyframe: Keyframe, at frame: Int) {
         keyframes[frame] = keyframe
         var index = 0
         while index < sortedKeys.count {
