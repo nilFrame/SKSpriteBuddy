@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        try! self.entity.runForever(animationNamed: "Running")
+        self.entity.runForever(animationNamed: "Running")
     }
     
     @IBAction func didSelecSkin(_ sender: UISegmentedControl) {

@@ -154,7 +154,7 @@ public class IAEntity: SKNode {
         return skinElement
     }
     
-    private func releaseSkin(named skinName: String) {
+    public func releaseSkin(named skinName: String) {
         loadedSkins.removeValue(forKey: skinName)
     }
     
@@ -214,35 +214,57 @@ public class IAEntity: SKNode {
     // MARK: - Animations stack
     //
     
-    public func run(animationNamed animationName: String) throws {
+    public func run(animationNamed animationName: String) {
         
-        if let animation = try self.animation(named: animationName) {
+        self.preload(animationNamed: animationName) {
+            
+            guard let animation = self.loadedAnimations[animationName] else {
+                return
+            }
+            
             self.run(animation, times: 1)
         }
     }
     
-    public func run(animationNamed animationName: String, times: Int) throws {
+    public func run(animationNamed animationName: String, times: Int) {
         
-        if let animation = try self.animation(named: animationName) {
+        self.preload(animationNamed: animationName) {
+            
+            guard let animation = self.loadedAnimations[animationName] else {
+                return
+            }
+            
             self.run(animation, times: times)
         }
     }
     
-    public func runForever(animationNamed animationName: String) throws {
+    public func runForever(animationNamed animationName: String) {
         
-        if let animation = try self.animation(named: animationName) {
+        self.preload(animationNamed: animationName) {
+            
+            guard let animation = self.loadedAnimations[animationName] else {
+                return
+            }
+            
             self.run(animation, times: -1)
         }
     }
     
-    private func animation(named animationName: String) throws -> IAAnimation? {
+    private func animation(named animationName: String) -> IAAnimation? {
         
-        guard let animationElement = animationXMLElement(for: animationName) else {
-            return nil
+        if let animation = loadedAnimations[animationName] {
+            
+            return animation
+            
+        }else {
+            
+            guard let animationElement = animationXMLElement(for: animationName) else {
+                return nil
+            }
+            
+            let animation = try? IAAnimation(xmlElement: animationElement)
+            return animation
         }
-        
-        let animation = try IAAnimation(xmlElement: animationElement)
-        return animation
     }
     
     private func animationXMLElement(for animationName: String) -> AEXMLElement? {
@@ -264,8 +286,48 @@ public class IAEntity: SKNode {
         return animationElement
     }
     
-    public func preload(animationNamed animationName: String, completion: ()->()) {
+    public func preload(animationNamed animationName: String, completion: @escaping ()->()) {
         
+        DispatchQueue.global(qos: .background).async {
+        
+            guard let animation = self.animation(named: animationName) else {
+                completion()
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.loadedAnimations[animationName] = animation
+                completion()
+            }
+        }
+    }
+    
+    public func preload(animations names: [String], completion: @escaping ()->()) {
+        
+        DispatchQueue.global(qos: .background).async {
+            
+            var counter = 0
+            for animationName in names {
+                
+                guard let animation = self.animation(named: animationName) else {
+                    return
+                }
+                
+                self.loadedAnimations[animation.name] = animation
+                
+                counter += 1
+                if counter == names.count {
+                    DispatchQueue.main.async {
+                        completion()
+                    }
+                }
+            }
+            
+        }
+    }
+    
+    public func releaseAnimation(named animationName: String) {
+        self.loadedAnimations.removeValue(forKey: animationName)
     }
     
     private func run(_ animation: IAAnimation, times: Int) {

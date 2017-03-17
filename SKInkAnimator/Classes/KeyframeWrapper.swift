@@ -65,10 +65,16 @@ class KeyframeWrapper: NSObject {
         guard keyframes.count > 0 else { return Keyframe() }
         if let keyframe = keyframe(at: frame) { return keyframe }
         
-        // Se é startFrame
-        if frame == 0 { return keyframes[sortedKeys.first!]! }
+        // If is the start frame
+        if frame == 0 {
+            guard let firstFrameWithKeyframe = sortedKeys.first else {
+                return Keyframe()
+            }
+            
+            return keyframes[firstFrameWithKeyframe] ?? Keyframe()
+        }
         
-        // Se é endFrame
+        // IF is the end frame
         if frame == animation.endFrame { return relativeKeyframe(at: 0) }
         
         var previousKeyframe: Keyframe
@@ -82,8 +88,8 @@ class KeyframeWrapper: NSObject {
             auxIndex += 1
         }
         
-        // Calculando previousKeyTuple
-        if auxIndex == 0 { // Se não tem nenhum keyframe antes do frame em questão
+        // Calculating previous key tuple
+        if auxIndex == 0 { // If ther's no any keyframe before the frame
             if frame < animation.endFrame {
                 previousKeyframe = relativeKeyframe(at: 0)
                 previousFrame = 0
@@ -91,7 +97,7 @@ class KeyframeWrapper: NSObject {
                 previousKeyframe = relativeKeyframe(at: animation.endFrame)
                 previousFrame = animation.endFrame
             }
-        } else { // Tem algum keyframe antes do frame em questão
+        } else { // There's some keyframe before the frame
             if frame < animation.endFrame || sortedKeys[auxIndex - 1] >= animation.endFrame {
                 previousFrame = sortedKeys[auxIndex - 1]
                 previousKeyframe = keyframes[previousFrame]!
@@ -101,8 +107,8 @@ class KeyframeWrapper: NSObject {
             }
         }
         
-        // Calculando nextKeyTuple
-        if auxIndex == keyframes.count { // Se não te nenhum keyframe depois do frame em questão
+        // Calculating the next key tuple
+        if auxIndex == keyframes.count { // If there's any keyframe after the frame
             if frame < animation.endFrame {
                 nextFrame = animation.endFrame
                 nextKeyframe = relativeKeyframe(at: animation.endFrame)
@@ -110,7 +116,7 @@ class KeyframeWrapper: NSObject {
                 nextFrame = previousFrame
                 nextKeyframe = previousKeyframe
             }
-        } else { // Tem algum keyframe depois do frame em questão
+        } else { //There's some keyframe after the frame
             if frame > animation.endFrame || sortedKeys[auxIndex] <= animation.endFrame {
                 nextFrame = sortedKeys[auxIndex]
                 nextKeyframe = keyframes[nextFrame]!
@@ -120,7 +126,7 @@ class KeyframeWrapper: NSObject {
             }
         }
         
-        // Calculando deltaKeyTuple
+        // Calculating delta key tuple
         var deltaFrame = nextFrame - previousFrame
         var relativeFrame = frame - previousFrame
         if deltaFrame == 0 {
