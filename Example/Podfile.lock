@@ -1,25 +1,23 @@
 PODS:
-  - AEXML (4.0.2)
-  - Nimble (5.1.1)
-  - Quick (1.0.0)
-  - SKInkAnimator (0.1.0):
-    - AEXML
+  - AEXML (4.3.3)
+  - SKInkAnimator (1.0.2):
+    - AEXML (~> 4.3.3)
 
 DEPENDENCIES:
-  - Nimble (~> 5.1.1)
-  - Quick (~> 1.0.0)
   - SKInkAnimator (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AEXML
 
 EXTERNAL SOURCES:
   SKInkAnimator:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  AEXML: 7de81f28c6c876a210f31924acc2e326cd01e162
-  Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
-  Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
-  SKInkAnimator: 1a9278e7033ffb6d9754c243d8c4de67729ada48
+  AEXML: 601f41fcaa7bda7605cad153b0f43db9ec006c0f
+  SKInkAnimator: 133cf9bf7451fc764d32e7024e879e6ef5814017
 
-PODFILE CHECKSUM: fa5f25482f3ac098ac3df05c78046f8a771c8561
+PODFILE CHECKSUM: 6114310cb3c7ad00ada6abaa5018979810fee0b0
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.5.3
