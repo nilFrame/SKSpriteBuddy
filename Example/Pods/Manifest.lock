@@ -1,6 +1,6 @@
 PODS:
   - AEXML (4.3.3)
-  - SKInkAnimator (1.0.2):
+  - SKInkAnimator (1.0.3):
     - AEXML (~> 4.3.3)
 
 DEPENDENCIES:
@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AEXML: 601f41fcaa7bda7605cad153b0f43db9ec006c0f
-  SKInkAnimator: 3c939de9bb5825774a88e08b090b14fffe21eb12
+  SKInkAnimator: da17eb5b92674f4222ff8b58c7a827f9d6ded69f
 
 PODFILE CHECKSUM: 6114310cb3c7ad00ada6abaa5018979810fee0b0
 
