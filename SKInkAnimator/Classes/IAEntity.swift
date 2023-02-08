@@ -255,7 +255,7 @@ public class IAEntity: SKNode {
             
             return animation
             
-        }else {
+        } else {
             
             guard let animationElement = animationXMLElement(for: animationName) else {
                 return nil
@@ -321,28 +321,39 @@ public class IAEntity: SKNode {
                     }
                 }
             }
-            
         }
     }
     
     public func releaseAnimation(named animationName: String) {
+
         self.loadedAnimations.removeValue(forKey: animationName)
     }
     
     private func run(_ animation: IAAnimation, times: Int) {
-        self.enumerateChildNodes(withName: ".//*", using: { (node, stop) in
+
+        self.enumerateChildNodes(withName: ".//*",
+                                 using: { (node, stop) in
             
             guard let iaNode = node as? IASpriteNode else {
                 return
             }
             
             if let action = animation.actions[iaNode.uuid] {
-                node.removeAllActions()
+
+                iaNode.removeAllActions()
+
+                if let startKeyframe = animation.startingKeyframeForBone[iaNode.uuid] {
+
+                    iaNode.configure(with: startKeyframe)
+                }
                 
                 if times < 0 {
-                    node.run(SKAction.repeatForever(action))
-                }else {
-                    node.run(SKAction.repeat(action, count: times))
+
+                    iaNode.run(SKAction.repeatForever(action))
+
+                } else {
+
+                    iaNode.run(SKAction.repeat(action, count: times))
                 }
             }
         })

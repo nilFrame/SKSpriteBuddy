@@ -88,5 +88,11 @@ public class IASpriteNode: SKSpriteNode {
         fatalError("init(coder:) has not been implemented")
     }
 
-    
+    func configure(with keyframe: Keyframe) {
+
+        self.xScale = keyframe.scale.x
+        self.yScale = keyframe.scale.y
+        self.position = keyframe.position
+        self.zRotation = keyframe.rotation
+    }
 }

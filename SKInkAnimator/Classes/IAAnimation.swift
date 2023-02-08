@@ -18,6 +18,7 @@ class IAAnimation: NSObject {
     var frameDuration: TimeInterval
     
     var actions: [NSUUID : SKAction]
+    var startingKeyframeForBone: [NSUUID: Keyframe]
     
     init(xmlElement: AEXMLElement) throws {
         
@@ -46,7 +47,8 @@ class IAAnimation: NSObject {
         self.endFrame = endFrame
         self.frameDuration = frameDuration
         self.name = name
-        self.actions = [NSUUID : SKAction]()
+        self.actions = [:]
+        self.startingKeyframeForBone = [:]
         
         super.init()
         
@@ -56,7 +58,14 @@ class IAAnimation: NSObject {
                 let uuid = NSUUID(uuidString: uuidString) else {
                     throw IAXMLParsingError.invalidAttribute(message: "Expected \"frameDuration\" attribute in animation xml element.")
             }
+
             let keyframeWrapper = try KeyframeWrapper(xmlElement: child)
+
+            if let startingKeyframe = keyframeWrapper.keyframe(at: .zero) {
+
+                self.startingKeyframeForBone[uuid] = startingKeyframe
+            }
+
             keyframeWrapper.animation = self
             self.actions[uuid] = try self.action(for: keyframeWrapper)
         }
@@ -67,11 +76,16 @@ class IAAnimation: NSObject {
         var actions = [SKAction]()
         
         var lastKeyframeIndex = self.startFrame
+
         for index in self.startFrame...self.endFrame {
+
             guard let keyframe = wrapper[index] else { continue }
+
             let duration = TimeInterval(index - lastKeyframeIndex) * self.frameDuration
             let lastKeyframe = wrapper[lastKeyframeIndex]
-            let action = ActionFactory.action(for: keyframe, previousKeyframe: lastKeyframe, duration: duration)
+            let action = ActionFactory.action(for: keyframe,
+                                              previousKeyframe: lastKeyframe,
+                                              duration: duration)
             actions.append(action)
             lastKeyframeIndex = index
         }

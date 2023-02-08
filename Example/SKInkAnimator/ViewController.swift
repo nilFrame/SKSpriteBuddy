@@ -13,6 +13,8 @@ import SpriteKit
 class ViewController: UIViewController {
 
     var entity: IAEntity!
+    var runningAnimationId: String?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,8 +24,11 @@ class ViewController: UIViewController {
         self.entity = try! IAEntity(withName: "entity")
         entity.position.y = -100
         scene.addChild(entity)
-        
-        (self.view as! SKView).presentScene(scene)
+
+        entity.preload(animations: ["Idle", "Running"]) {
+
+            (self.view as! SKView).presentScene(scene)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,7 +37,20 @@ class ViewController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.entity.runForever(animationNamed: "Running")
+
+        let animationName: String
+        switch self.runningAnimationId {
+
+        case "Running":
+            animationName = "Idle"
+        case "Idle":
+            animationName = "Running"
+        default:
+            animationName = "Idle"
+        }
+
+        self.entity.runForever(animationNamed: animationName)
+        self.runningAnimationId = animationName
     }
     
     @IBAction func didSelecSkin(_ sender: UISegmentedControl) {

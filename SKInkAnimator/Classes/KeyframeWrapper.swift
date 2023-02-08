@@ -163,6 +163,4 @@ class KeyframeWrapper: NSObject {
         
         return relativeKey
     }
-
-    
 }

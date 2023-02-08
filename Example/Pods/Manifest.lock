@@ -7,7 +7,7 @@ DEPENDENCIES:
   - SKInkAnimator (from `../`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - AEXML
 
 EXTERNAL SOURCES:
@@ -16,8 +16,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AEXML: 601f41fcaa7bda7605cad153b0f43db9ec006c0f
-  SKInkAnimator: 133cf9bf7451fc764d32e7024e879e6ef5814017
+  SKInkAnimator: 3c939de9bb5825774a88e08b090b14fffe21eb12
 
 PODFILE CHECKSUM: 6114310cb3c7ad00ada6abaa5018979810fee0b0
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.11.3

@@ -13,23 +13,33 @@ import SpriteKit
 class ActionFactory: NSObject {
     
     
-    static func action(for keyframe: Keyframe, previousKeyframe: Keyframe?, duration: TimeInterval) -> SKAction {
+    static func action(for keyframe: Keyframe,
+                       previousKeyframe: Keyframe?,
+                       duration: TimeInterval) -> SKAction {
         
         var group = [SKAction]()
         
-        if let moveAction = moveAction(with: keyframe, and: previousKeyframe, duration: duration) {
+        if let moveAction = moveAction(with: keyframe,
+                                       and: previousKeyframe,
+                                       duration: duration) {
             group.append(moveAction)
         }
         
-        if let rotateAction = rotateAction(with: keyframe, and: previousKeyframe, duration: duration) {
+        if let rotateAction = rotateAction(with: keyframe,
+                                           and: previousKeyframe,
+                                           duration: duration) {
             group.append(rotateAction)
         }
         
-        if let resizeAction = resizeAction(with: keyframe, and: previousKeyframe, duration: duration) {
+        if let resizeAction = resizeAction(with: keyframe,
+                                           and: previousKeyframe,
+                                           duration: duration) {
             group.append(resizeAction)
         }
         
-        if let scaleAction = scaleAction(with: keyframe, and: previousKeyframe, duration: duration) {
+        if let scaleAction = scaleAction(with: keyframe,
+                                         and: previousKeyframe,
+                                         duration: duration) {
             group.append(scaleAction)
         }
         

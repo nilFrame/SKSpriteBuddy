@@ -278,7 +278,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SKInkAnimator_Example/Pods-SKInkAnimator_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SKInkAnimator_Example/Pods-SKInkAnimator_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AEXML/AEXML.framework",
 				"${BUILT_PRODUCTS_DIR}/SKInkAnimator/SKInkAnimator.framework",
 			);
@@ -289,7 +289,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SKInkAnimator_Example/Pods-SKInkAnimator_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SKInkAnimator_Example/Pods-SKInkAnimator_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7F6306F0329307DEC960FC83 /* [CP] Check Pods Manifest.lock */ = {
