@@ -1,0 +1,18 @@
+{
+  "images" : [
+    {
+      "filename" : "Skin_FB305F5D-C7C5-4254-9040-CCABF5D436AE_Texture.png",
+      "idiom" : "ipad",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Skin_FB305F5D-C7C5-4254-9040-CCABF5D436AE_Texture@2x.png",
+      "idiom" : "ipad",
+      "scale" : "2x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -7,128 +7,104 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0292C8F1ED87AB54D617383CA60E0441 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109555545CF6974BEB520DB59C4798A6 /* Options.swift */; };
+		01EC37BDFF353E47DDA1CC779760FC1F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149A5206C9F617AE8F5CDE9B1BE0E170 /* Foundation.framework */; };
+		046E01D5C04E4FF07A005393C41B4871 /* Pods-SKInkAnimator_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE1237589A3C7D2D99E4025A471E13A /* Pods-SKInkAnimator_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A2AD67897FC4100C7AF4C4A7F511601 /* Pods-SKInkAnimator_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C442B33CED5BF920AB4507D802AF5 /* Pods-SKInkAnimator_Tests-dummy.m */; };
-		255002D3AE3CAD390B0A928B1C6654F6 /* SKInkAnimator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F44E982404A9528865ABE91DB1F6736F /* SKInkAnimator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		34644953A39DC2B11677863E4E66F3C7 /* ActionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3DDBC11963F4BC3B3C123805F48916 /* ActionFactory.swift */; };
-		4D2B298D73BD362885D0DE01D789B702 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E279122087CBC69439FFC042F80808 /* Error.swift */; };
-		4E630224C8F4DF0C39E54B95E77807EB /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1785FEFE3B1DEF0D8CEEBF2266984ED4 /* SpriteKit.framework */; };
-		5D1269F57CE701A90CB42FC787164306 /* KeyframeWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0B2AA6108DB8E29EBEB93E8960CCF2 /* KeyframeWrapper.swift */; };
-		617308966F74EFAB6657BB97EBE55E0B /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E28CCA2643C20CA52EE1FD7921D871B /* Parser.swift */; };
+		320927FFFE678B259ACE9204A990A529 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7968417A28A42E2CEF2156A227DD69F9 /* XMLParser.swift */; };
+		3FA654E95C8159F639FC594386E96029 /* ActionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9CAE9EB86EF39594892D5B4B3BF7B5 /* ActionFactory.swift */; };
+		64D152BB176BBED01EA2B1A94F20D545 /* SKInkAnimator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B26F1F71E51DDF9E308EFE054B0CAB2 /* SKInkAnimator-dummy.m */; };
 		6E891A6523687AC8D55BCD0B8C661CFE /* Pods-SKInkAnimator_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 83782788015F31346CF6617058643D45 /* Pods-SKInkAnimator_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		70D0F188D2E12219C9FD5AF0532C14C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149A5206C9F617AE8F5CDE9B1BE0E170 /* Foundation.framework */; };
-		769471837F45D4352AD557A3399AF52E /* IASpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D314BFD6C89C880B6B2F979997E048E /* IASpriteNode.swift */; };
-		77FB2D46B74A31CED74228E9DAA96255 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB5D7A8243CD7C15FC993AAEB885841 /* Document.swift */; };
-		7A682FC64C423760D29323D3F118FF46 /* AEXML-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E6506078CED383C7EE403D4CD4AED30B /* AEXML-dummy.m */; };
-		7B28E3090642676E37130CBBD712E025 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453DCBF768A302FEAA29CC39DB52E01 /* Element.swift */; };
 		7CA501005C3ED8989F4886FB1926F833 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149A5206C9F617AE8F5CDE9B1BE0E170 /* Foundation.framework */; };
-		804495DEE79476A589D731F6A0306808 /* Pods-SKInkAnimator_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE1237589A3C7D2D99E4025A471E13A /* Pods-SKInkAnimator_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9124B8BE11FB7B88050F33E17FE9C98A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149A5206C9F617AE8F5CDE9B1BE0E170 /* Foundation.framework */; };
-		91A8A39BE802FF3CA4BF400CCBDC19B7 /* IASkin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4528A7DCFA65A68A3C9AB897DDC3F60C /* IASkin.swift */; };
-		92E91A27688FE7D85F1A9C06A870A002 /* IAAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB8C547C343DDF07BBF5EAB9AA72B52 /* IAAnimation.swift */; };
-		97BE9D6C5A6758EE84662FC83B7D65AF /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7ADB5D1D28767E15C4ADD240E03580 /* Utils.swift */; };
-		A3EAB7E8E3131133B149B0DBDFC7000F /* Keyframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F39CC4BAE5C7026D1B7D288CF056D4 /* Keyframe.swift */; };
-		B257EB45FBC3BB55E259019A6D0D909C /* IAEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FC541DBF184100F353412A79D954A6 /* IAEntity.swift */; };
-		C32F1DED05F622D527289F23E6E197BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149A5206C9F617AE8F5CDE9B1BE0E170 /* Foundation.framework */; };
-		C408CB4FEF6A26D885BD15300A556BC0 /* AEXML-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7168BA98CB12122A3A81FB594A9D58A1 /* AEXML-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DBCC00F7328F5A4040207F7CDCA56C28 /* SKInkAnimator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 228D9296D8223B37860D73DCF0538BE8 /* SKInkAnimator-dummy.m */; };
-		F292854C71266563987C57509386178F /* Pods-SKInkAnimator_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FDA3A65CB22960039F3B7416DA0D1F /* Pods-SKInkAnimator_Example-dummy.m */; };
+		80F7DFDD766EDDAB1C480B9CBF16A08F /* IAEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6630F6232C1D5E22CDECD134254E31 /* IAEntity.swift */; };
+		9E798EF6EE5E98DB4F936703E370DFA9 /* IAAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A234F530C717155AEB009DF35497B94 /* IAAnimation.swift */; };
+		A4F10F329DF3E7C2EB1776D6C3F9CABB /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA028B03A4584BD7D3334DAFCC0C38 /* Utils.swift */; };
+		ABF4A9F0E0C2486C96EE4A09086E5FA4 /* IASkin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBA41209974E90C245E118E6D2770D9 /* IASkin.swift */; };
+		C8988466EA28951D8631541BA418F5EE /* Pods-SKInkAnimator_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FDA3A65CB22960039F3B7416DA0D1F /* Pods-SKInkAnimator_Example-dummy.m */; };
+		D75423F5175646927A272C2AFAC52D2A /* SKInkAnimator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CEC39B0FCD5608AB1A9109BF25A32D86 /* SKInkAnimator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9138F1485AA75473241E558B3C8D88C /* IASpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC34523DC9214F04094E1FF85F482CCE /* IASpriteNode.swift */; };
+		D96B61C40F99A5387955F9C4F8042F4E /* Keyframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47895612FAD7510C95EFF115037F1B22 /* Keyframe.swift */; };
+		E0D35E1D2ADD137F6EAAF2720DF8C16B /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1785FEFE3B1DEF0D8CEEBF2266984ED4 /* SpriteKit.framework */; };
+		E6F240441CB64E802662BC6D111D9955 /* KeyframeWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB400F1E1BB338A51D23DC5C398A23B /* KeyframeWrapper.swift */; };
+		F1E3495126E4DDB621A2CE9C7F5733A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149A5206C9F617AE8F5CDE9B1BE0E170 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4785D77DC40B2494FAD68705FED27B10 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F1ED2A1ECB0BFD73856B9CB2DCE9049B;
-			remoteInfo = SKInkAnimator;
-		};
-		538318E6282A44E1975EAF08454A3AAC /* PBXContainerItemProxy */ = {
+		335BC5CB1314C21017E33BA2D2B78317 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 924686BB8900D2CB07C02C41D7FB36F7;
 			remoteInfo = "Pods-SKInkAnimator_Example";
 		};
-		E0F772BBD4442666A7EA6865A83767DE /* PBXContainerItemProxy */ = {
+		9B6F82548FEA1D8B068D466DD078B892 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D0C3B2890BA25B4203C768E55BB4D4FA;
-			remoteInfo = AEXML;
-		};
-		FFF780F394D20A81F39AF48AB6AF5686 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D0C3B2890BA25B4203C768E55BB4D4FA;
-			remoteInfo = AEXML;
+			remoteGlobalIDString = F1ED2A1ECB0BFD73856B9CB2DCE9049B;
+			remoteInfo = SKInkAnimator;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		019E79C51D5AF3D60E9978B5E4E18C3E /* SKInkAnimator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SKInkAnimator.debug.xcconfig; sourceTree = "<group>"; };
-		059DAF37EED31E0CF7F315EFCA594FE4 /* AEXML.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AEXML.release.xcconfig; sourceTree = "<group>"; };
-		0C7ADB5D1D28767E15C4ADD240E03580 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = SKInkAnimator/Classes/Utils.swift; sourceTree = "<group>"; };
-		0CF7E10AA97EA26D82B354B445552F00 /* AEXML.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AEXML.debug.xcconfig; sourceTree = "<group>"; };
+		038C8D0ABA89F01ADE8A29F601BF3179 /* SKInkAnimator-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SKInkAnimator-Info.plist"; sourceTree = "<group>"; };
 		0D42843957D19D12827129CA315A77C8 /* Pods-SKInkAnimator_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SKInkAnimator_Example-Info.plist"; sourceTree = "<group>"; };
-		0E28CCA2643C20CA52EE1FD7921D871B /* Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = Sources/AEXML/Parser.swift; sourceTree = "<group>"; };
-		109555545CF6974BEB520DB59C4798A6 /* Options.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Options.swift; path = Sources/AEXML/Options.swift; sourceTree = "<group>"; };
 		149A5206C9F617AE8F5CDE9B1BE0E170 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		1785FEFE3B1DEF0D8CEEBF2266984ED4 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/SpriteKit.framework; sourceTree = DEVELOPER_DIR; };
 		1BE1237589A3C7D2D99E4025A471E13A /* Pods-SKInkAnimator_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SKInkAnimator_Example-umbrella.h"; sourceTree = "<group>"; };
-		1E0B2AA6108DB8E29EBEB93E8960CCF2 /* KeyframeWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyframeWrapper.swift; path = SKInkAnimator/Classes/KeyframeWrapper.swift; sourceTree = "<group>"; };
-		228D9296D8223B37860D73DCF0538BE8 /* SKInkAnimator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SKInkAnimator-dummy.m"; sourceTree = "<group>"; };
 		295DA71D281C914EB289CDE381BDE4BA /* SKInkAnimator */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SKInkAnimator; path = SKInkAnimator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29FDA3A65CB22960039F3B7416DA0D1F /* Pods-SKInkAnimator_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SKInkAnimator_Example-dummy.m"; sourceTree = "<group>"; };
-		348F9634275B4FD2081F117C0B69CEB1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		39B771D1B9758A66EF59990F2CD8EB73 /* SKInkAnimator-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SKInkAnimator-Info.plist"; sourceTree = "<group>"; };
+		315198DD4FC4BB337D0109D82DD85D0B /* SKInkAnimator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SKInkAnimator.release.xcconfig; sourceTree = "<group>"; };
 		3BFC06DA4EB7D0CA96F68BEDDEF3AEF9 /* Pods-SKInkAnimator_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SKInkAnimator_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3D314BFD6C89C880B6B2F979997E048E /* IASpriteNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IASpriteNode.swift; path = SKInkAnimator/Classes/IASpriteNode.swift; sourceTree = "<group>"; };
-		3E072A88B5F017892D25C266C090C41F /* AEXML-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AEXML-Info.plist"; sourceTree = "<group>"; };
-		3F3DDBC11963F4BC3B3C123805F48916 /* ActionFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionFactory.swift; path = SKInkAnimator/Classes/ActionFactory.swift; sourceTree = "<group>"; };
-		4528A7DCFA65A68A3C9AB897DDC3F60C /* IASkin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IASkin.swift; path = SKInkAnimator/Classes/IASkin.swift; sourceTree = "<group>"; };
+		47895612FAD7510C95EFF115037F1B22 /* Keyframe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keyframe.swift; path = SKInkAnimator/Classes/Keyframe.swift; sourceTree = "<group>"; };
 		4899DA1E5F6C8F6AD22EB30D1BD355AE /* Pods-SKInkAnimator_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKInkAnimator_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		4CB8C547C343DDF07BBF5EAB9AA72B52 /* IAAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IAAnimation.swift; path = SKInkAnimator/Classes/IAAnimation.swift; sourceTree = "<group>"; };
-		4EB5D7A8243CD7C15FC993AAEB885841 /* Document.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Document.swift; path = Sources/AEXML/Document.swift; sourceTree = "<group>"; };
-		55F39CC4BAE5C7026D1B7D288CF056D4 /* Keyframe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keyframe.swift; path = SKInkAnimator/Classes/Keyframe.swift; sourceTree = "<group>"; };
+		4A234F530C717155AEB009DF35497B94 /* IAAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IAAnimation.swift; path = SKInkAnimator/Classes/IAAnimation.swift; sourceTree = "<group>"; };
+		4B26F1F71E51DDF9E308EFE054B0CAB2 /* SKInkAnimator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SKInkAnimator-dummy.m"; sourceTree = "<group>"; };
 		59130B3C042417C892FB9CCB381D827D /* Pods-SKInkAnimator_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SKInkAnimator_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		596C5B68A3CEA67D124D1A43F4EA7012 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		61E279122087CBC69439FFC042F80808 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Sources/AEXML/Error.swift; sourceTree = "<group>"; };
-		68AD3AF70E72374F8F0DF8E7F1DD717A /* AEXML-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AEXML-prefix.pch"; sourceTree = "<group>"; };
-		7168BA98CB12122A3A81FB594A9D58A1 /* AEXML-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AEXML-umbrella.h"; sourceTree = "<group>"; };
+		615908C11BD1AE8153E13EF24343CC2F /* SKInkAnimator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SKInkAnimator.debug.xcconfig; sourceTree = "<group>"; };
 		776644BB42F2E0C2477CF180F64432AE /* Pods-SKInkAnimator_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SKInkAnimator_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		7968417A28A42E2CEF2156A227DD69F9 /* XMLParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
 		7A4FA3A24431649B8C028354398A1ACA /* Pods-SKInkAnimator_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SKInkAnimator_Tests.modulemap"; sourceTree = "<group>"; };
-		806EFF3CA62BC0F8A57FFCD593E6AB5F /* AEXML.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AEXML.modulemap; sourceTree = "<group>"; };
+		7B9CAE9EB86EF39594892D5B4B3BF7B5 /* ActionFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionFactory.swift; path = SKInkAnimator/Classes/ActionFactory.swift; sourceTree = "<group>"; };
+		7CBA41209974E90C245E118E6D2770D9 /* IASkin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IASkin.swift; path = SKInkAnimator/Classes/IASkin.swift; sourceTree = "<group>"; };
 		83782788015F31346CF6617058643D45 /* Pods-SKInkAnimator_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SKInkAnimator_Tests-umbrella.h"; sourceTree = "<group>"; };
-		83FC541DBF184100F353412A79D954A6 /* IAEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IAEntity.swift; path = SKInkAnimator/Classes/IAEntity.swift; sourceTree = "<group>"; };
 		8878D139779BB453D093E06D4D651673 /* Pods-SKInkAnimator_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKInkAnimator_Example.release.xcconfig"; sourceTree = "<group>"; };
-		93A9A2220A4504451D959ECFD80BCD02 /* SKInkAnimator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SKInkAnimator.release.xcconfig; sourceTree = "<group>"; };
-		9453DCBF768A302FEAA29CC39DB52E01 /* Element.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Element.swift; path = Sources/AEXML/Element.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E90044A80BCE3DE023131222FA999EC /* Pods-SKInkAnimator_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKInkAnimator_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		A0BBC95C9D073AF3C28A1E2395B7B05B /* SKInkAnimator.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SKInkAnimator.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F6630F6232C1D5E22CDECD134254E31 /* IAEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IAEntity.swift; path = SKInkAnimator/Classes/IAEntity.swift; sourceTree = "<group>"; };
+		9FE2C36CC753ED0CB7FF5D7E34A1DEA9 /* SKInkAnimator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SKInkAnimator-prefix.pch"; sourceTree = "<group>"; };
 		A471B6F6F91CCF8C0E485E86BA90EB69 /* Pods-SKInkAnimator_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SKInkAnimator_Example.modulemap"; sourceTree = "<group>"; };
-		AF6AC2EDDFC455B2C0C19BB14F22D5FD /* SKInkAnimator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SKInkAnimator.modulemap; sourceTree = "<group>"; };
-		B7F452C8575CD760062098924FC3A1D2 /* AEXML */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AEXML; path = AEXML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B90163C28572CDC43D40F7AC41254DB0 /* SKInkAnimator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SKInkAnimator-prefix.pch"; sourceTree = "<group>"; };
+		ADB400F1E1BB338A51D23DC5C398A23B /* KeyframeWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyframeWrapper.swift; path = SKInkAnimator/Classes/KeyframeWrapper.swift; sourceTree = "<group>"; };
+		B9530EB3B89567448846ACA21537C643 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		BFCF9165B8F838E520DC6D6E05E1BAAE /* Pods-SKInkAnimator_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKInkAnimator_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		C24B8E6DA6E3191D15BEEF6D84486D5C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		C7A85852A86D44C0CB655CB7A071782C /* Pods-SKInkAnimator_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SKInkAnimator_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		C866A2E29DA3048304FB02A7C7F1F92E /* Pods-SKInkAnimator_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SKInkAnimator_Example-frameworks.sh"; sourceTree = "<group>"; };
 		CB91F069C9CB201C41C67EFECFEC1BFE /* Pods-SKInkAnimator_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SKInkAnimator_Example"; path = Pods_SKInkAnimator_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E6506078CED383C7EE403D4CD4AED30B /* AEXML-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AEXML-dummy.m"; sourceTree = "<group>"; };
+		CEC39B0FCD5608AB1A9109BF25A32D86 /* SKInkAnimator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SKInkAnimator-umbrella.h"; sourceTree = "<group>"; };
+		CEDA028B03A4584BD7D3334DAFCC0C38 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		EC34523DC9214F04094E1FF85F482CCE /* IASpriteNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IASpriteNode.swift; path = SKInkAnimator/Classes/IASpriteNode.swift; sourceTree = "<group>"; };
+		EC6DBF4A328536AB847461FDBB942442 /* SKInkAnimator.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SKInkAnimator.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		ED2C442B33CED5BF920AB4507D802AF5 /* Pods-SKInkAnimator_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SKInkAnimator_Tests-dummy.m"; sourceTree = "<group>"; };
 		F38F175387A821375688DF3B066638C6 /* Pods-SKInkAnimator_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SKInkAnimator_Tests-Info.plist"; sourceTree = "<group>"; };
-		F44E982404A9528865ABE91DB1F6736F /* SKInkAnimator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SKInkAnimator-umbrella.h"; sourceTree = "<group>"; };
+		FCDF4EB48469C89E27039D7FA6F5C0D9 /* SKInkAnimator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SKInkAnimator.modulemap; sourceTree = "<group>"; };
 		FEAD13C435EB30446F6CECDD3E6CE7EB /* Pods-SKInkAnimator_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SKInkAnimator_Tests"; path = Pods_SKInkAnimator_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		457C5511CF12F048CDC585FC25130319 /* Frameworks */ = {
+		20C32CD578B562D973D083A28552D933 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9124B8BE11FB7B88050F33E17FE9C98A /* Foundation.framework in Frameworks */,
+				01EC37BDFF353E47DDA1CC779760FC1F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C94B71A8B73CC577821B93A50380038 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1E3495126E4DDB621A2CE9C7F5733A9 /* Foundation.framework in Frameworks */,
+				E0D35E1D2ADD137F6EAAF2720DF8C16B /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,46 +116,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9DC8BD43B6EB836727FC871149393520 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				70D0F188D2E12219C9FD5AF0532C14C9 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ADFED323129833C369CCAB86D905A5BD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C32F1DED05F622D527289F23E6E197BF /* Foundation.framework in Frameworks */,
-				4E630224C8F4DF0C39E54B95E77807EB /* SpriteKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		05BFE12E6BEECB03665CB8E0217EEFE7 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E0859BF4D3F6E34CBA979593592864A0 /* SKInkAnimator */,
+				3D38C895CD407FA1051190ABE38CB87F /* SKInkAnimator */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		0CBCA06E2E28E4F95A59C9724FCAAFDD /* AEXML */ = {
-			isa = PBXGroup;
-			children = (
-				4EB5D7A8243CD7C15FC993AAEB885841 /* Document.swift */,
-				9453DCBF768A302FEAA29CC39DB52E01 /* Element.swift */,
-				61E279122087CBC69439FFC042F80808 /* Error.swift */,
-				109555545CF6974BEB520DB59C4798A6 /* Options.swift */,
-				0E28CCA2643C20CA52EE1FD7921D871B /* Parser.swift */,
-				DAADD7507C106C5831CDB288024E0B5D /* Support Files */,
-			);
-			name = AEXML;
-			path = AEXML;
 			sourceTree = "<group>";
 		};
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
@@ -206,30 +151,47 @@
 			path = "Target Support Files/Pods-SKInkAnimator_Tests";
 			sourceTree = "<group>";
 		};
-		2EF8F6B44EFB45C2C679A11DA3AC7760 /* Support Files */ = {
+		28E545F88F6ECD8B4CE53BD6384D888B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				AF6AC2EDDFC455B2C0C19BB14F22D5FD /* SKInkAnimator.modulemap */,
-				228D9296D8223B37860D73DCF0538BE8 /* SKInkAnimator-dummy.m */,
-				39B771D1B9758A66EF59990F2CD8EB73 /* SKInkAnimator-Info.plist */,
-				B90163C28572CDC43D40F7AC41254DB0 /* SKInkAnimator-prefix.pch */,
-				F44E982404A9528865ABE91DB1F6736F /* SKInkAnimator-umbrella.h */,
-				019E79C51D5AF3D60E9978B5E4E18C3E /* SKInkAnimator.debug.xcconfig */,
-				93A9A2220A4504451D959ECFD80BCD02 /* SKInkAnimator.release.xcconfig */,
+				FCDF4EB48469C89E27039D7FA6F5C0D9 /* SKInkAnimator.modulemap */,
+				4B26F1F71E51DDF9E308EFE054B0CAB2 /* SKInkAnimator-dummy.m */,
+				038C8D0ABA89F01ADE8A29F601BF3179 /* SKInkAnimator-Info.plist */,
+				9FE2C36CC753ED0CB7FF5D7E34A1DEA9 /* SKInkAnimator-prefix.pch */,
+				CEC39B0FCD5608AB1A9109BF25A32D86 /* SKInkAnimator-umbrella.h */,
+				615908C11BD1AE8153E13EF24343CC2F /* SKInkAnimator.debug.xcconfig */,
+				315198DD4FC4BB337D0109D82DD85D0B /* SKInkAnimator.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/SKInkAnimator";
 			sourceTree = "<group>";
 		};
-		42E22C469FBB6AB6BE208CB29B0F3B4A /* Products */ = {
+		33F07709225089047488D07B9743E3A3 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				B7F452C8575CD760062098924FC3A1D2 /* AEXML */,
-				CB91F069C9CB201C41C67EFECFEC1BFE /* Pods-SKInkAnimator_Example */,
-				FEAD13C435EB30446F6CECDD3E6CE7EB /* Pods-SKInkAnimator_Tests */,
-				295DA71D281C914EB289CDE381BDE4BA /* SKInkAnimator */,
+				CEDA028B03A4584BD7D3334DAFCC0C38 /* Utils.swift */,
+				7968417A28A42E2CEF2156A227DD69F9 /* XMLParser.swift */,
 			);
-			name = Products;
+			name = Utils;
+			path = SKInkAnimator/Classes/Utils;
+			sourceTree = "<group>";
+		};
+		3D38C895CD407FA1051190ABE38CB87F /* SKInkAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				7B9CAE9EB86EF39594892D5B4B3BF7B5 /* ActionFactory.swift */,
+				4A234F530C717155AEB009DF35497B94 /* IAAnimation.swift */,
+				9F6630F6232C1D5E22CDECD134254E31 /* IAEntity.swift */,
+				7CBA41209974E90C245E118E6D2770D9 /* IASkin.swift */,
+				EC34523DC9214F04094E1FF85F482CCE /* IASpriteNode.swift */,
+				47895612FAD7510C95EFF115037F1B22 /* Keyframe.swift */,
+				ADB400F1E1BB338A51D23DC5C398A23B /* KeyframeWrapper.swift */,
+				9C7B58A012B24672C71D6BED70D931BF /* Pod */,
+				28E545F88F6ECD8B4CE53BD6384D888B /* Support Files */,
+				33F07709225089047488D07B9743E3A3 /* Utils */,
+			);
+			name = SKInkAnimator;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		524D8B08F98A9FDFA7BEF76694C652E1 /* Pods-SKInkAnimator_Example */ = {
@@ -249,22 +211,24 @@
 			path = "Target Support Files/Pods-SKInkAnimator_Example";
 			sourceTree = "<group>";
 		};
-		9782AA8167AC6EE5EC184818893B866E /* Pod */ = {
+		9C7B58A012B24672C71D6BED70D931BF /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				596C5B68A3CEA67D124D1A43F4EA7012 /* LICENSE */,
-				348F9634275B4FD2081F117C0B69CEB1 /* README.md */,
-				A0BBC95C9D073AF3C28A1E2395B7B05B /* SKInkAnimator.podspec */,
+				C24B8E6DA6E3191D15BEEF6D84486D5C /* LICENSE */,
+				B9530EB3B89567448846ACA21537C643 /* README.md */,
+				EC6DBF4A328536AB847461FDBB942442 /* SKInkAnimator.podspec */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		AC19C99CD36D57AB5C2FBECEE9F01030 /* Pods */ = {
+		BE3AC6B309C82DF7EB1283734B605720 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0CBCA06E2E28E4F95A59C9724FCAAFDD /* AEXML */,
+				CB91F069C9CB201C41C67EFECFEC1BFE /* Pods-SKInkAnimator_Example */,
+				FEAD13C435EB30446F6CECDD3E6CE7EB /* Pods-SKInkAnimator_Tests */,
+				295DA71D281C914EB289CDE381BDE4BA /* SKInkAnimator */,
 			);
-			name = Pods;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		C8EE81331E6E93589101E10612B3C065 /* Targets Support Files */ = {
@@ -282,43 +246,9 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				05BFE12E6BEECB03665CB8E0217EEFE7 /* Development Pods */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				AC19C99CD36D57AB5C2FBECEE9F01030 /* Pods */,
-				42E22C469FBB6AB6BE208CB29B0F3B4A /* Products */,
+				BE3AC6B309C82DF7EB1283734B605720 /* Products */,
 				C8EE81331E6E93589101E10612B3C065 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		DAADD7507C106C5831CDB288024E0B5D /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				806EFF3CA62BC0F8A57FFCD593E6AB5F /* AEXML.modulemap */,
-				E6506078CED383C7EE403D4CD4AED30B /* AEXML-dummy.m */,
-				3E072A88B5F017892D25C266C090C41F /* AEXML-Info.plist */,
-				68AD3AF70E72374F8F0DF8E7F1DD717A /* AEXML-prefix.pch */,
-				7168BA98CB12122A3A81FB594A9D58A1 /* AEXML-umbrella.h */,
-				0CF7E10AA97EA26D82B354B445552F00 /* AEXML.debug.xcconfig */,
-				059DAF37EED31E0CF7F315EFCA594FE4 /* AEXML.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/AEXML";
-			sourceTree = "<group>";
-		};
-		E0859BF4D3F6E34CBA979593592864A0 /* SKInkAnimator */ = {
-			isa = PBXGroup;
-			children = (
-				3F3DDBC11963F4BC3B3C123805F48916 /* ActionFactory.swift */,
-				4CB8C547C343DDF07BBF5EAB9AA72B52 /* IAAnimation.swift */,
-				83FC541DBF184100F353412A79D954A6 /* IAEntity.swift */,
-				4528A7DCFA65A68A3C9AB897DDC3F60C /* IASkin.swift */,
-				3D314BFD6C89C880B6B2F979997E048E /* IASpriteNode.swift */,
-				55F39CC4BAE5C7026D1B7D288CF056D4 /* Keyframe.swift */,
-				1E0B2AA6108DB8E29EBEB93E8960CCF2 /* KeyframeWrapper.swift */,
-				0C7ADB5D1D28767E15C4ADD240E03580 /* Utils.swift */,
-				9782AA8167AC6EE5EC184818893B866E /* Pod */,
-				2EF8F6B44EFB45C2C679A11DA3AC7760 /* Support Files */,
-			);
-			name = SKInkAnimator;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		E3087FB6CD7134D4DB9812A053828C75 /* iOS */ = {
@@ -333,14 +263,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		07B51F5ADC78E3BDCE098D88F898AF10 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				255002D3AE3CAD390B0A928B1C6654F6 /* SKInkAnimator-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3DC698194E020A2A6AAB481B8A529AAD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -349,19 +271,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		76788E19634C10A57C4127EC255BFC5B /* Headers */ = {
+		43EE9197221DD42CC359B68F8DE1A430 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				804495DEE79476A589D731F6A0306808 /* Pods-SKInkAnimator_Example-umbrella.h in Headers */,
+				D75423F5175646927A272C2AFAC52D2A /* SKInkAnimator-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8E7F33C3930362068C3103BDC98DA2F5 /* Headers */ = {
+		FD95A325FD49355CC3EE0978A830470F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C408CB4FEF6A26D885BD15300A556BC0 /* AEXML-umbrella.h in Headers */,
+				046E01D5C04E4FF07A005393C41B4871 /* Pods-SKInkAnimator_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +302,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				215F57B1061737964C5032EDB5650A00 /* PBXTargetDependency */,
+				81B80D56CAB701FBEE6A81D78B592E63 /* PBXTargetDependency */,
 			);
 			name = "Pods-SKInkAnimator_Tests";
 			productName = Pods_SKInkAnimator_Tests;
@@ -389,55 +311,35 @@
 		};
 		924686BB8900D2CB07C02C41D7FB36F7 /* Pods-SKInkAnimator_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 174077D38CEADA8147874493170C4973 /* Build configuration list for PBXNativeTarget "Pods-SKInkAnimator_Example" */;
+			buildConfigurationList = 2AF200DDA554C11AEA0AE3FB725A79E7 /* Build configuration list for PBXNativeTarget "Pods-SKInkAnimator_Example" */;
 			buildPhases = (
-				76788E19634C10A57C4127EC255BFC5B /* Headers */,
-				787430F4223953FA5AE2928AD16BC0BB /* Sources */,
-				9DC8BD43B6EB836727FC871149393520 /* Frameworks */,
-				5F75E94974D0C30977D1C9AC33A9D6F0 /* Resources */,
+				FD95A325FD49355CC3EE0978A830470F /* Headers */,
+				55A5588D4CDFF668092C3F64C1EF5FDE /* Sources */,
+				20C32CD578B562D973D083A28552D933 /* Frameworks */,
+				37F4E8C42BA550D1531FE7C2EB8584B9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A96DF9C8F6EA497E0D4FEFDC234201E2 /* PBXTargetDependency */,
-				C848AC784302892881D2A686D041CEE4 /* PBXTargetDependency */,
+				7DEE3C92744C7E011E5BF37595C9B930 /* PBXTargetDependency */,
 			);
 			name = "Pods-SKInkAnimator_Example";
 			productName = Pods_SKInkAnimator_Example;
 			productReference = CB91F069C9CB201C41C67EFECFEC1BFE /* Pods-SKInkAnimator_Example */;
 			productType = "com.apple.product-type.framework";
 		};
-		D0C3B2890BA25B4203C768E55BB4D4FA /* AEXML */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9D39FDA84DF437EF4EB660C36F5065E6 /* Build configuration list for PBXNativeTarget "AEXML" */;
-			buildPhases = (
-				8E7F33C3930362068C3103BDC98DA2F5 /* Headers */,
-				E9E8440644184450778E10C0A25B595F /* Sources */,
-				457C5511CF12F048CDC585FC25130319 /* Frameworks */,
-				CC28BB5042E5066A22664608BBF3A051 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = AEXML;
-			productName = AEXML;
-			productReference = B7F452C8575CD760062098924FC3A1D2 /* AEXML */;
-			productType = "com.apple.product-type.framework";
-		};
 		F1ED2A1ECB0BFD73856B9CB2DCE9049B /* SKInkAnimator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5601DECC48E7016A7210866BE773D336 /* Build configuration list for PBXNativeTarget "SKInkAnimator" */;
+			buildConfigurationList = 1EC9381F04352308837D6736C25F762B /* Build configuration list for PBXNativeTarget "SKInkAnimator" */;
 			buildPhases = (
-				07B51F5ADC78E3BDCE098D88F898AF10 /* Headers */,
-				1A1B90878A8234525197B983A2D24EBC /* Sources */,
-				ADFED323129833C369CCAB86D905A5BD /* Frameworks */,
-				FFECEC090371D62E35A9545AEEF17614 /* Resources */,
+				43EE9197221DD42CC359B68F8DE1A430 /* Headers */,
+				7C6AD540F788B718DD409F5E8EDD42E0 /* Sources */,
+				2C94B71A8B73CC577821B93A50380038 /* Frameworks */,
+				F00D31BD8DD3EFA3B4C8ED61182AFEFF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				931548C2410E31969A52424BB29846E1 /* PBXTargetDependency */,
 			);
 			name = SKInkAnimator;
 			productName = SKInkAnimator;
@@ -462,11 +364,10 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 42E22C469FBB6AB6BE208CB29B0F3B4A /* Products */;
+			productRefGroup = BE3AC6B309C82DF7EB1283734B605720 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D0C3B2890BA25B4203C768E55BB4D4FA /* AEXML */,
 				924686BB8900D2CB07C02C41D7FB36F7 /* Pods-SKInkAnimator_Example */,
 				0C1974F30C6F85E8199354AE91B52498 /* Pods-SKInkAnimator_Tests */,
 				F1ED2A1ECB0BFD73856B9CB2DCE9049B /* SKInkAnimator */,
@@ -482,21 +383,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5F75E94974D0C30977D1C9AC33A9D6F0 /* Resources */ = {
+		37F4E8C42BA550D1531FE7C2EB8584B9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CC28BB5042E5066A22664608BBF3A051 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FFECEC090371D62E35A9545AEEF17614 /* Resources */ = {
+		F00D31BD8DD3EFA3B4C8ED61182AFEFF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -506,19 +400,11 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1A1B90878A8234525197B983A2D24EBC /* Sources */ = {
+		55A5588D4CDFF668092C3F64C1EF5FDE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34644953A39DC2B11677863E4E66F3C7 /* ActionFactory.swift in Sources */,
-				92E91A27688FE7D85F1A9C06A870A002 /* IAAnimation.swift in Sources */,
-				B257EB45FBC3BB55E259019A6D0D909C /* IAEntity.swift in Sources */,
-				91A8A39BE802FF3CA4BF400CCBDC19B7 /* IASkin.swift in Sources */,
-				769471837F45D4352AD557A3399AF52E /* IASpriteNode.swift in Sources */,
-				A3EAB7E8E3131133B149B0DBDFC7000F /* Keyframe.swift in Sources */,
-				5D1269F57CE701A90CB42FC787164306 /* KeyframeWrapper.swift in Sources */,
-				DBCC00F7328F5A4040207F7CDCA56C28 /* SKInkAnimator-dummy.m in Sources */,
-				97BE9D6C5A6758EE84662FC83B7D65AF /* Utils.swift in Sources */,
+				C8988466EA28951D8631541BA418F5EE /* Pods-SKInkAnimator_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,62 +416,46 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		787430F4223953FA5AE2928AD16BC0BB /* Sources */ = {
+		7C6AD540F788B718DD409F5E8EDD42E0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F292854C71266563987C57509386178F /* Pods-SKInkAnimator_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E9E8440644184450778E10C0A25B595F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7A682FC64C423760D29323D3F118FF46 /* AEXML-dummy.m in Sources */,
-				77FB2D46B74A31CED74228E9DAA96255 /* Document.swift in Sources */,
-				7B28E3090642676E37130CBBD712E025 /* Element.swift in Sources */,
-				4D2B298D73BD362885D0DE01D789B702 /* Error.swift in Sources */,
-				0292C8F1ED87AB54D617383CA60E0441 /* Options.swift in Sources */,
-				617308966F74EFAB6657BB97EBE55E0B /* Parser.swift in Sources */,
+				3FA654E95C8159F639FC594386E96029 /* ActionFactory.swift in Sources */,
+				9E798EF6EE5E98DB4F936703E370DFA9 /* IAAnimation.swift in Sources */,
+				80F7DFDD766EDDAB1C480B9CBF16A08F /* IAEntity.swift in Sources */,
+				ABF4A9F0E0C2486C96EE4A09086E5FA4 /* IASkin.swift in Sources */,
+				D9138F1485AA75473241E558B3C8D88C /* IASpriteNode.swift in Sources */,
+				D96B61C40F99A5387955F9C4F8042F4E /* Keyframe.swift in Sources */,
+				E6F240441CB64E802662BC6D111D9955 /* KeyframeWrapper.swift in Sources */,
+				64D152BB176BBED01EA2B1A94F20D545 /* SKInkAnimator-dummy.m in Sources */,
+				A4F10F329DF3E7C2EB1776D6C3F9CABB /* Utils.swift in Sources */,
+				320927FFFE678B259ACE9204A990A529 /* XMLParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		215F57B1061737964C5032EDB5650A00 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-SKInkAnimator_Example";
-			target = 924686BB8900D2CB07C02C41D7FB36F7 /* Pods-SKInkAnimator_Example */;
-			targetProxy = 538318E6282A44E1975EAF08454A3AAC /* PBXContainerItemProxy */;
-		};
-		931548C2410E31969A52424BB29846E1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AEXML;
-			target = D0C3B2890BA25B4203C768E55BB4D4FA /* AEXML */;
-			targetProxy = FFF780F394D20A81F39AF48AB6AF5686 /* PBXContainerItemProxy */;
-		};
-		A96DF9C8F6EA497E0D4FEFDC234201E2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AEXML;
-			target = D0C3B2890BA25B4203C768E55BB4D4FA /* AEXML */;
-			targetProxy = E0F772BBD4442666A7EA6865A83767DE /* PBXContainerItemProxy */;
-		};
-		C848AC784302892881D2A686D041CEE4 /* PBXTargetDependency */ = {
+		7DEE3C92744C7E011E5BF37595C9B930 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SKInkAnimator;
 			target = F1ED2A1ECB0BFD73856B9CB2DCE9049B /* SKInkAnimator */;
-			targetProxy = 4785D77DC40B2494FAD68705FED27B10 /* PBXContainerItemProxy */;
+			targetProxy = 9B6F82548FEA1D8B068D466DD078B892 /* PBXContainerItemProxy */;
+		};
+		81B80D56CAB701FBEE6A81D78B592E63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SKInkAnimator_Example";
+			target = 924686BB8900D2CB07C02C41D7FB36F7 /* Pods-SKInkAnimator_Example */;
+			targetProxy = 335BC5CB1314C21017E33BA2D2B78317 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1C6C9044059337EE6903EDA07A7848FF /* Debug */ = {
+		1B473AF0FC0843EF673236BFD29AF669 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4899DA1E5F6C8F6AD22EB30D1BD355AE /* Pods-SKInkAnimator_Example.debug.xcconfig */;
+			baseConfigurationReference = 315198DD4FC4BB337D0109D82DD85D0B /* SKInkAnimator.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -595,52 +465,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SKInkAnimator_Example/Pods-SKInkAnimator_Example-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SKInkAnimator/SKInkAnimator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SKInkAnimator/SKInkAnimator-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SKInkAnimator_Example/Pods-SKInkAnimator_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/SKInkAnimator/SKInkAnimator.modulemap";
+				PRODUCT_MODULE_NAME = SKInkAnimator;
+				PRODUCT_NAME = SKInkAnimator;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		239FFBCF6BEF242A1B038FEA8A9EF327 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8878D139779BB453D093E06D4D651673 /* Pods-SKInkAnimator_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SKInkAnimator_Example/Pods-SKInkAnimator_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SKInkAnimator_Example/Pods-SKInkAnimator_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -648,7 +484,7 @@
 			};
 			name = Release;
 		};
-		260A2927EDAB3FCA24C812C71871A859 /* Release */ = {
+		30E0B9EFD9A5C45D0D351231E81B30B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -698,7 +534,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -710,41 +546,12 @@
 			};
 			name = Release;
 		};
-		352ADA757C4AF96FB5645F2FA71962B7 /* Debug */ = {
+		6168E3521A603038C9D85FA6DA9C5E94 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0CF7E10AA97EA26D82B354B445552F00 /* AEXML.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/AEXML/AEXML-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AEXML/AEXML-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AEXML/AEXML.modulemap";
-				PRODUCT_MODULE_NAME = AEXML;
-				PRODUCT_NAME = AEXML;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		4FDF4717A43F0B9036F8CCA5C36C719B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E90044A80BCE3DE023131222FA999EC /* Pods-SKInkAnimator_Tests.release.xcconfig */;
+			baseConfigurationReference = BFCF9165B8F838E520DC6D6E05E1BAAE /* Pods-SKInkAnimator_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -756,7 +563,142 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SKInkAnimator_Tests/Pods-SKInkAnimator_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SKInkAnimator_Tests/Pods-SKInkAnimator_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		74F435D4F45E2FBFFDE2894565FB9383 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8878D139779BB453D093E06D4D651673 /* Pods-SKInkAnimator_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SKInkAnimator_Example/Pods-SKInkAnimator_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SKInkAnimator_Example/Pods-SKInkAnimator_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A448C7F86C0D9E0F94F84D76A30A369A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4899DA1E5F6C8F6AD22EB30D1BD355AE /* Pods-SKInkAnimator_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SKInkAnimator_Example/Pods-SKInkAnimator_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SKInkAnimator_Example/Pods-SKInkAnimator_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BBA0C10245240615D23AF7564B9F446C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 615908C11BD1AE8153E13EF24343CC2F /* SKInkAnimator.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SKInkAnimator/SKInkAnimator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SKInkAnimator/SKInkAnimator-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SKInkAnimator/SKInkAnimator.modulemap";
+				PRODUCT_MODULE_NAME = SKInkAnimator;
+				PRODUCT_NAME = SKInkAnimator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BF061C42293280293A09D975F6F57460 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E90044A80BCE3DE023131222FA999EC /* Pods-SKInkAnimator_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SKInkAnimator_Tests/Pods-SKInkAnimator_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SKInkAnimator_Tests/Pods-SKInkAnimator_Tests.modulemap";
@@ -774,70 +716,7 @@
 			};
 			name = Release;
 		};
-		6828558F64F48E16AB4A174B05645DB8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 019E79C51D5AF3D60E9978B5E4E18C3E /* SKInkAnimator.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SKInkAnimator/SKInkAnimator-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SKInkAnimator/SKInkAnimator-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SKInkAnimator/SKInkAnimator.modulemap";
-				PRODUCT_MODULE_NAME = SKInkAnimator;
-				PRODUCT_NAME = SKInkAnimator;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		DA18DECC0DEA3CB292B31BF631D9159B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BFCF9165B8F838E520DC6D6E05E1BAAE /* Pods-SKInkAnimator_Tests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SKInkAnimator_Tests/Pods-SKInkAnimator_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SKInkAnimator_Tests/Pods-SKInkAnimator_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		E29FF4F65AD894C364B2973A5C9A6DD8 /* Debug */ = {
+		F4FF6A0D1970CA9705974E3CB2134802 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -890,7 +769,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -903,76 +782,23 @@
 			};
 			name = Debug;
 		};
-		E460F9A7AFA39A2697450FCA8C8EAB34 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 93A9A2220A4504451D959ECFD80BCD02 /* SKInkAnimator.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SKInkAnimator/SKInkAnimator-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SKInkAnimator/SKInkAnimator-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SKInkAnimator/SKInkAnimator.modulemap";
-				PRODUCT_MODULE_NAME = SKInkAnimator;
-				PRODUCT_NAME = SKInkAnimator;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E9C70D5FDE4142174A5B2D63D05DC30A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 059DAF37EED31E0CF7F315EFCA594FE4 /* AEXML.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/AEXML/AEXML-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AEXML/AEXML-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AEXML/AEXML.modulemap";
-				PRODUCT_MODULE_NAME = AEXML;
-				PRODUCT_NAME = AEXML;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		174077D38CEADA8147874493170C4973 /* Build configuration list for PBXNativeTarget "Pods-SKInkAnimator_Example" */ = {
+		1EC9381F04352308837D6736C25F762B /* Build configuration list for PBXNativeTarget "SKInkAnimator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1C6C9044059337EE6903EDA07A7848FF /* Debug */,
-				239FFBCF6BEF242A1B038FEA8A9EF327 /* Release */,
+				BBA0C10245240615D23AF7564B9F446C /* Debug */,
+				1B473AF0FC0843EF673236BFD29AF669 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2AF200DDA554C11AEA0AE3FB725A79E7 /* Build configuration list for PBXNativeTarget "Pods-SKInkAnimator_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A448C7F86C0D9E0F94F84D76A30A369A /* Debug */,
+				74F435D4F45E2FBFFDE2894565FB9383 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -980,26 +806,8 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E29FF4F65AD894C364B2973A5C9A6DD8 /* Debug */,
-				260A2927EDAB3FCA24C812C71871A859 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5601DECC48E7016A7210866BE773D336 /* Build configuration list for PBXNativeTarget "SKInkAnimator" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6828558F64F48E16AB4A174B05645DB8 /* Debug */,
-				E460F9A7AFA39A2697450FCA8C8EAB34 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9D39FDA84DF437EF4EB660C36F5065E6 /* Build configuration list for PBXNativeTarget "AEXML" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				352ADA757C4AF96FB5645F2FA71962B7 /* Debug */,
-				E9C70D5FDE4142174A5B2D63D05DC30A /* Release */,
+				F4FF6A0D1970CA9705974E3CB2134802 /* Debug */,
+				30E0B9EFD9A5C45D0D351231E81B30B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1007,8 +815,8 @@
 		DBC08A00C9B822810CB250900156F47C /* Build configuration list for PBXNativeTarget "Pods-SKInkAnimator_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DA18DECC0DEA3CB292B31BF631D9159B /* Debug */,
-				4FDF4717A43F0B9036F8CCA5C36C719B /* Release */,
+				6168E3521A603038C9D85FA6DA9C5E94 /* Debug */,
+				BF061C42293280293A09D975F6F57460 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

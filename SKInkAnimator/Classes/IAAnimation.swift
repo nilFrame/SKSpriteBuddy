@@ -3,12 +3,11 @@
 //  Pods
 //
 //  Created by Rafael Moura on 16/03/17.
-//
+//  Copyright © 2023 InkAnimator. All rights reserved.
 //
 
 import Foundation
 import SpriteKit
-import AEXML
 
 class IAAnimation: NSObject {
 
@@ -17,8 +16,8 @@ class IAAnimation: NSObject {
     var endFrame: Int
     var frameDuration: TimeInterval
     
-    var actions: [NSUUID : SKAction]
-    var startingKeyframeForBone: [NSUUID: Keyframe]
+    var actions: [UUID : SKAction]
+    var startingKeyframeForBone: [UUID: Keyframe]
     
     init(xmlElement: AEXMLElement) throws {
         
@@ -55,7 +54,7 @@ class IAAnimation: NSObject {
         for child in xmlElement.children {
             
             guard let uuidString = child.attributes[IAXMLConstants.uuidAttribute],
-                let uuid = NSUUID(uuidString: uuidString) else {
+                let uuid = UUID(uuidString: uuidString) else {
                     throw IAXMLParsingError.invalidAttribute(message: "Expected \"frameDuration\" attribute in animation xml element.")
             }
 

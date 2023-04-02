@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<project delta="1">
+	<entity name="entity">
+		<bone uuid="E7DC704E-5E70-4AFA-9A72-34B67D6A2E6B" alpha="1.0" colorBlendFactor="0.0" documentName="Texture.Inkpad" name="mainBone" blendMode="0">
+			<position y="-82.0" x="-49.0" />
+			<zPosition value="0.0" />
+			<anchorPoint y="0.0" x="0.5" />
+			<size height="232.0" width="202.0" />
+			<rotation value="0.0" />
+			<color red="0.0" green="0.0" blue="0.0" alpha="0.0" />
+			<children>
+				<bone name="Body" documentName="Texture.Inkpad" alpha="1.0" blendMode="0" uuid="AC8787FB-00E6-43F3-AD1A-BFC3D4EC2379" colorBlendFactor="0.0">
+					<position x="5.322269439697266" y="0.0" />
+					<zPosition value="1.0" />
+					<anchorPoint y="0.0" x="0.5266113877296448" />
+					<size height="235.0" width="200.0" />
+					<rotation value="0.0" />
+					<color blue="0.0" red="0.0" green="0.0" alpha="0.0" />
+					<children>
+						<bone colorBlendFactor="0.0" blendMode="0" documentName="Texture.Inkpad" name="Crack" uuid="3A65445D-B518-49F1-A4FF-B4DE907356BE" alpha="1.0">
+							<position y="145.58242797851562" x="0.37145233154296875" />
+							<zPosition value="2.0" />
+							<anchorPoint y="0.5" x="0.5" />
+							<size width="140.0" height="60.0" />
+							<rotation value="0.0" />
+							<color alpha="0.0" red="0.0" blue="0.0" green="0.0" />
+							<children>
+								<bone blendMode="0" name="Eyes" documentName="Texture.Inkpad" colorBlendFactor="0.0" alpha="1.0" uuid="6FCA5064-7DE8-4C07-931E-2938CE6AD82A">
+									<position y="-0.5" x="-1.0" />
+									<zPosition value="1.0" />
+									<anchorPoint y="0.5" x="0.5" />
+									<size height="30.0" width="100.0" />
+									<rotation value="0.0" />
+									<color red="0.0" blue="0.0" alpha="0.0" green="0.0" />
+								</bone>
+							</children>
+						</bone>
+						<bone colorBlendFactor="0.0" uuid="FB305F5D-C7C5-4254-9040-CCABF5D436AE" name="Stains" blendMode="0" alpha="1.0" documentName="Texture.Inkpad">
+							<position y="0.0" x="0.0" />
+							<zPosition value="1.0" />
+							<anchorPoint x="0.5" y="0.0" />
+							<size height="216.0" width="200.0" />
+							<rotation value="0.0" />
+							<color alpha="0.0" blue="0.0" red="0.0" green="0.0" />
+						</bone>
+					</children>
+				</bone>
+			</children>
+		</bone>
+		<sampleBone alpha="1.0" documentName="Texture.Inkpad" blendMode="0" uuid="AC8787FB-00E6-43F3-AD1A-BFC3D4EC2379" colorBlendFactor="0.0" name="Body">
+			<position x="5.322269439697266" y="0.0" />
+			<zPosition value="1.0" />
+			<anchorPoint x="0.5266113877296448" y="0.0" />
+			<size width="200.0" height="235.0" />
+			<rotation value="0.0" />
+			<color green="0.0" blue="0.0" alpha="0.0" red="0.0" />
+			<children>
+				<bone uuid="3A65445D-B518-49F1-A4FF-B4DE907356BE" blendMode="0" name="Crack" alpha="1.0" documentName="Texture.Inkpad" colorBlendFactor="0.0">
+					<position y="145.58242797851562" x="0.37145233154296875" />
+					<zPosition value="2.0" />
+					<anchorPoint y="0.5" x="0.5" />
+					<size height="60.0" width="140.0" />
+					<rotation value="0.0" />
+					<color blue="0.0" green="0.0" alpha="0.0" red="0.0" />
+					<children>
+						<bone name="Eyes" blendMode="0" alpha="1.0" documentName="Texture.Inkpad" colorBlendFactor="0.0" uuid="6FCA5064-7DE8-4C07-931E-2938CE6AD82A">
+							<position y="-0.5" x="-1.0" />
+							<zPosition value="1.0" />
+							<anchorPoint x="0.5" y="0.5" />
+							<size height="30.0" width="100.0" />
+							<rotation value="0.0" />
+							<color blue="0.0" red="0.0" alpha="0.0" green="0.0" />
+						</bone>
+					</children>
+				</bone>
+				<bone name="Stains" colorBlendFactor="0.0" uuid="FB305F5D-C7C5-4254-9040-CCABF5D436AE" documentName="Texture.Inkpad" alpha="1.0" blendMode="0">
+					<position y="0.0" x="0.0" />
+					<zPosition value="1.0" />
+					<anchorPoint y="0.0" x="0.5" />
+					<size height="216.0" width="200.0" />
+					<rotation value="0.0" />
+					<color green="0.0" alpha="0.0" red="0.0" blue="0.0" />
+				</bone>
+			</children>
+		</sampleBone>
+	</entity>
+	<skins workingSkin="Skin">
+		<entityInfo>
+			<bone uuid="AC8787FB-00E6-43F3-AD1A-BFC3D4EC2379">
+				<texture name="Texture" index="0" />
+			</bone>
+			<bone uuid="FB305F5D-C7C5-4254-9040-CCABF5D436AE">
+				<texture name="Texture" index="0" />
+			</bone>
+			<bone uuid="6FCA5064-7DE8-4C07-931E-2938CE6AD82A">
+				<texture index="0" name="Texture" />
+			</bone>
+			<bone uuid="32CA7778-D34B-403C-B256-1A2B68B195AC">
+				<texture name="Texture" index="0" />
+			</bone>
+			<bone uuid="3A65445D-B518-49F1-A4FF-B4DE907356BE">
+				<texture index="0" name="Texture" />
+			</bone>
+		</entityInfo>
+		<skin name="Skin">
+			<bone isVisible="true" uuid="3A65445D-B518-49F1-A4FF-B4DE907356BE" />
+			<bone uuid="FB305F5D-C7C5-4254-9040-CCABF5D436AE" isVisible="true" />
+			<bone uuid="6FCA5064-7DE8-4C07-931E-2938CE6AD82A" isVisible="true" />
+			<bone isVisible="true" uuid="AC8787FB-00E6-43F3-AD1A-BFC3D4EC2379" />
+		</skin>
+	</skins>
+	<animations>
+		<animation frameDuration="0.033" startFrame="0" endFrame="30" name="Idle">
+			<keyframeWrapper uuid="AC8787FB-00E6-43F3-AD1A-BFC3D4EC2379">
+				<keyframe colorBlendFactor="0.0" alpha="1.0" frame="0" timingMode="linear">
+					<position x="0.0" y="0.0" />
+					<rotation value="0.0" />
+					<size height="230.0" width="200.0" />
+					<scale y="1.0" x="1.0" />
+					<color red="0.0" green="0.0" alpha="0.0" blue="0.0" />
+				</keyframe>
+				<keyframe alpha="1.0" colorBlendFactor="0.0" timingMode="linear" frame="10">
+					<position x="0.0" y="0.0" />
+					<rotation value="-0.20881398022174835" />
+					<size width="200.0" height="210.7252655029297" />
+					<scale x="1.0" y="1.0" />
+					<color blue="0.0" alpha="0.0" green="0.0" red="0.0" />
+				</keyframe>
+				<keyframe alpha="1.0" timingMode="linear" colorBlendFactor="0.0" frame="20">
+					<position y="0.0" x="0.0" />
+					<rotation value="0.33965641260147095" />
+					<size height="230.0" width="200.0" />
+					<scale y="1.0" x="1.0" />
+					<color green="0.0" blue="0.0" alpha="0.0" red="0.0" />
+				</keyframe>
+			</keyframeWrapper>
+			<keyframeWrapper uuid="3A65445D-B518-49F1-A4FF-B4DE907356BE">
+				<keyframe colorBlendFactor="0.0" timingMode="linear" frame="0" alpha="1.0">
+					<position x="-1.5706672668457031" y="135.86436462402344" />
+					<rotation value="0.0" />
+					<size height="60.0" width="140.0" />
+					<scale y="1.0" x="1.0" />
+					<color red="0.0" green="0.0" blue="0.0" alpha="0.0" />
+				</keyframe>
+			</keyframeWrapper>
+			<keyframeWrapper uuid="6FCA5064-7DE8-4C07-931E-2938CE6AD82A">
+				<keyframe frame="20" alpha="1.0" timingMode="linear" colorBlendFactor="0.0">
+					<position y="-0.5" x="-1.0" />
+					<rotation value="0.0" />
+					<size height="0.0" width="100.0" />
+					<scale y="1.0" x="1.0" />
+					<color blue="0.0" alpha="0.0" green="0.0" red="0.0" />
+				</keyframe>
+				<keyframe frame="0" colorBlendFactor="0.0" timingMode="linear" alpha="1.0">
+					<position y="-0.5" x="-1.0" />
+					<rotation value="0.0" />
+					<size width="100.0" height="30.0" />
+					<scale x="1.0" y="1.0" />
+					<color blue="0.0" green="0.0" alpha="0.0" red="0.0" />
+				</keyframe>
+			</keyframeWrapper>
+			<keyframeWrapper uuid="FB305F5D-C7C5-4254-9040-CCABF5D436AE">
+				<keyframe timingMode="linear" alpha="1.0" frame="0" colorBlendFactor="0.0">
+					<position y="0.0" x="0.0" />
+					<rotation value="0.0" />
+					<size height="216.0" width="200.0" />
+					<scale y="1.0" x="1.0" />
+					<color red="0.0" alpha="0.0" green="0.0" blue="0.0" />
+				</keyframe>
+				<keyframe timingMode="linear" colorBlendFactor="0.0" frame="10" alpha="1.0">
+					<position x="-5.151659965515137" y="6.110097885131836" />
+					<rotation value="0.0" />
+					<size height="192.53289794921875" width="200.0" />
+					<scale x="1.0" y="1.0" />
+					<color blue="0.0" alpha="0.0" green="0.0" red="0.0" />
+				</keyframe>
+			</keyframeWrapper>
+			<keyframeWrapper uuid="32CA7778-D34B-403C-B256-1A2B68B195AC">
+				<keyframe frame="10" alpha="1.0" colorBlendFactor="0.0" timingMode="linear">
+					<position x="0.0" y="0.0" />
+					<rotation value="0.8726646304130554" />
+					<size width="200.0" height="160.0" />
+					<scale x="1.0" y="1.0" />
+					<color blue="0.0" alpha="0.0" green="0.0" red="0.0" />
+				</keyframe>
+				<keyframe timingMode="linear" alpha="1.0" colorBlendFactor="0.0" frame="0">
+					<position y="0.0" x="0.0" />
+					<rotation value="0.0" />
+					<size height="160.0" width="200.0" />
+					<scale x="1.0" y="1.0" />
+					<color green="0.0" alpha="0.0" blue="0.0" red="0.0" />
+				</keyframe>
+			</keyframeWrapper>
+			<keyframeWrapper uuid="E7DC704E-5E70-4AFA-9A72-34B67D6A2E6B">
+				<keyframe colorBlendFactor="0.0" timingMode="linear" alpha="1.0" frame="0">
+					<position y="0.0" x="0.0" />
+					<rotation value="0.0" />
+					<size height="300.0" width="300.0" />
+					<scale x="1.0" y="1.0" />
+					<color blue="0.0" red="0.0" alpha="0.0" green="0.0" />
+				</keyframe>
+			</keyframeWrapper>
+		</animation>
+		<animation frameDuration="0.033" endFrame="15" name="Jump" startFrame="0">
+			<keyframeWrapper uuid="6FCA5064-7DE8-4C07-931E-2938CE6AD82A">
+				<keyframe colorBlendFactor="0.0" frame="8" alpha="1.0" timingMode="linear">
+					<position x="3.0" y="0.0" />
+					<rotation value="0.0" />
+					<size height="30.0" width="100.0" />
+					<scale y="1.0" x="1.0" />
+					<color blue="0.0" red="0.0" green="0.0" alpha="0.0" />
+				</keyframe>
+				<keyframe colorBlendFactor="0.0" timingMode="linear" alpha="1.0" frame="0">
+					<position x="3.0" y="-0.5" />
+					<rotation value="0.0" />
+					<size width="100.0" height="30.0" />
+					<scale x="1.0" y="1.0" />
+					<color alpha="0.0" blue="0.0" red="0.0" green="0.0" />
+				</keyframe>
+				<keyframe timingMode="linear" alpha="1.0" colorBlendFactor="0.0" frame="5">
+					<position x="3.0" y="0.0" />
+					<rotation value="0.0" />
+					<size width="100.0" height="6.0" />
+					<scale y="1.0" x="1.0" />
+					<color green="0.0" alpha="0.0" red="0.0" blue="0.0" />
+				</keyframe>
+			</keyframeWrapper>
+			<keyframeWrapper uuid="3A65445D-B518-49F1-A4FF-B4DE907356BE">
+				<keyframe colorBlendFactor="0.0" timingMode="linear" alpha="1.0" frame="0">
+					<position y="133.89999389648438" x="3.0" />
+					<rotation value="0.0" />
+					<size width="140.0" height="60.0" />
+					<scale x="1.0" y="1.0" />
+					<color alpha="0.0" red="0.0" green="0.0" blue="0.0" />
+				</keyframe>
+				<keyframe timingMode="linear" colorBlendFactor="0.0" alpha="1.0" frame="5">
+					<position y="114.36436462402344" x="3.0" />
+					<rotation value="0.0" />
+					<size width="140.0" height="60.0" />
+					<scale y="1.0" x="1.0" />
+					<color blue="0.0" red="0.0" green="0.0" alpha="0.0" />
+				</keyframe>
+				<keyframe timingMode="linear" frame="8" colorBlendFactor="0.0" alpha="1.0">
+					<position y="138.16436767578125" x="3.0" />
+					<rotation value="0.0" />
+					<size height="60.0" width="140.0" />
+					<scale y="1.0" x="1.0" />
+					<color green="0.0" blue="0.0" red="0.0" alpha="0.0" />
+				</keyframe>
+			</keyframeWrapper>
+			<keyframeWrapper uuid="E7DC704E-5E70-4AFA-9A72-34B67D6A2E6B">
+				<keyframe alpha="1.0" timingMode="linear" colorBlendFactor="0.0" frame="0">
+					<position y="0.0" x="0.0" />
+					<rotation value="0.0" />
+					<size height="300.0" width="300.0" />
+					<scale y="1.0" x="1.0" />
+					<color blue="0.0" green="0.0" alpha="0.0" red="0.0" />
+				</keyframe>
+			</keyframeWrapper>
+			<keyframeWrapper uuid="FB305F5D-C7C5-4254-9040-CCABF5D436AE">
+				<keyframe frame="0" colorBlendFactor="0.0" alpha="1.0" timingMode="linear">
+					<position x="0.0" y="0.0" />
+					<rotation value="0.0" />
+					<size width="200.0" height="216.0" />
+					<scale x="1.0" y="1.0" />
+					<color alpha="0.0" blue="0.0" red="0.0" green="0.0" />
+				</keyframe>
+				<keyframe alpha="1.0" timingMode="linear" frame="8" colorBlendFactor="0.0">
+					<position x="0.0" y="0.0" />
+					<rotation value="0.0" />
+					<size width="200.0" height="237.39999389648438" />
+					<scale y="1.0" x="1.0" />
+					<color alpha="0.0" blue="0.0" red="0.0" green="0.0" />
+				</keyframe>
+				<keyframe colorBlendFactor="1.0" frame="5" timingMode="linear" alpha="1.0">
+					<position x="0.0" y="6.0" />
+					<rotation value="0.0" />
+					<size height="164.0" width="200.0" />
+					<scale y="1.0" x="1.0" />
+					<color blue="0.0" alpha="1.0" red="1.0" green="0.1474199891090393" />
+				</keyframe>
+			</keyframeWrapper>
+			<keyframeWrapper uuid="AC8787FB-00E6-43F3-AD1A-BFC3D4EC2379">
+				<keyframe frame="8" timingMode="linear" alpha="1.0" colorBlendFactor="0.0">
+					<position y="0.0" x="0.0" />
+					<rotation value="0.0" />
+					<size height="247.79998779296875" width="200.0" />
+					<scale y="1.0" x="1.0" />
+					<color red="0.0" alpha="0.0" blue="0.0" green="0.0" />
+				</keyframe>
+				<keyframe colorBlendFactor="0.0" frame="0" timingMode="linear" alpha="1.0">
+					<position y="0.0" x="0.0" />
+					<rotation value="0.0" />
+					<size width="200.0" height="230.0" />
+					<scale y="1.0" x="1.0" />
+					<color red="0.0" green="0.0" alpha="0.0" blue="0.0" />
+				</keyframe>
+				<keyframe colorBlendFactor="0.0" alpha="1.0" frame="5" timingMode="linear">
+					<position y="0.0" x="0.0" />
+					<rotation value="0.0" />
+					<size width="200.0" height="191.0" />
+					<scale x="1.0" y="1.0" />
+					<color green="0.0" alpha="0.0" red="0.0" blue="0.0" />
+				</keyframe>
+			</keyframeWrapper>
+		</animation>
+		<animation frameDuration="0.033" name="Blink" endFrame="20" startFrame="0">
+			<keyframeWrapper uuid="E7DC704E-5E70-4AFA-9A72-34B67D6A2E6B">
+				<keyframe frame="0" timingMode="linear" alpha="1.0" colorBlendFactor="0.0">
+					<position y="-82.0" x="-49.0" />
+					<rotation value="0.0" />
+					<size height="232.0" width="202.0" />
+					<scale y="1.0" x="1.0" />
+					<color green="0.0" alpha="0.0" red="0.0" blue="0.0" />
+				</keyframe>
+			</keyframeWrapper>
+			<keyframeWrapper uuid="6FCA5064-7DE8-4C07-931E-2938CE6AD82A">
+				<keyframe alpha="0.1138392835855484" timingMode="linear" colorBlendFactor="0.0" frame="13">
+					<position x="-1.0" y="-0.5" />
+					<rotation value="0.0" />
+					<size height="30.0" width="100.0" />
+					<scale x="1.0" y="1.0" />
+					<color alpha="0.0" blue="0.0" red="0.0" green="0.0" />
+				</keyframe>
+				<keyframe timingMode="linear" alpha="1.0" colorBlendFactor="0.0" frame="0">
+					<position y="-0.5" x="-1.0" />
+					<rotation value="0.0" />
+					<size width="100.0" height="30.0" />
+					<scale x="1.0" y="1.0" />
+					<color alpha="0.0" green="0.0" red="0.0" blue="0.0" />
+				</keyframe>
+			</keyframeWrapper>
+			<keyframeWrapper uuid="FB305F5D-C7C5-4254-9040-CCABF5D436AE">
+				<keyframe colorBlendFactor="0.0" timingMode="linear" alpha="1.0" frame="0">
+					<position y="0.0" x="0.0" />
+					<rotation value="0.0" />
+					<size width="200.0" height="216.0" />
+					<scale y="1.0" x="1.0" />
+					<color blue="0.0" green="0.0" red="0.0" alpha="0.0" />
+				</keyframe>
+				<keyframe alpha="1.0" colorBlendFactor="1.0" timingMode="linear" frame="13">
+					<position y="0.0" x="0.0" />
+					<rotation value="0.0" />
+					<size height="216.0" width="200.0" />
+					<scale y="1.0" x="1.0" />
+					<color alpha="1.0" red="1.0" green="0.614250659942627" blue="0.0" />
+				</keyframe>
+			</keyframeWrapper>
+			<keyframeWrapper uuid="AC8787FB-00E6-43F3-AD1A-BFC3D4EC2379">
+				<keyframe timingMode="linear" alpha="1.0" colorBlendFactor="0.0" frame="0">
+					<position y="0.0" x="0.0" />
+					<rotation value="0.0" />
+					<size height="230.0" width="200.0" />
+					<scale y="1.0" x="1.0" />
+					<color alpha="0.0" green="0.0" blue="0.0" red="0.0" />
+				</keyframe>
+			</keyframeWrapper>
+			<keyframeWrapper uuid="3A65445D-B518-49F1-A4FF-B4DE907356BE">
+				<keyframe colorBlendFactor="0.0" alpha="1.0" frame="0" timingMode="linear">
+					<position x="-1.5706672668457031" y="135.86436462402344" />
+					<rotation value="0.0" />
+					<size width="140.0" height="60.0" />
+					<scale y="1.0" x="1.0" />
+					<color blue="0.0" green="0.0" red="0.0" alpha="0.0" />
+				</keyframe>
+			</keyframeWrapper>
+		</animation>
+	</animations>
+</project>

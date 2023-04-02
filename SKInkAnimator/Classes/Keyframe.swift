@@ -3,19 +3,21 @@
 //  Pods
 //
 //  Created by Rafael Moura on 16/03/17.
-//
+//  Copyright © 2023 InkAnimator. All rights reserved.
 //
 
 import Foundation
-import AEXML
 
-class Keyframe: NSObject {
+struct Keyframe {
     
-    var position: CGPoint = CGPoint.zero
-    var rotation: CGFloat = 0
+    var position: CGPoint = .zero
+    var rotation: CGFloat = .zero
     var size: CGSize = CGSize.zero
     var scale: CGPoint = CGPoint(x: 1, y: 1)
     var timingMode: TimingMode = .linear
+    var colorBlendFactor: CGFloat = .zero
+    var alpha: CGFloat = 1.0
+    var color: UIColor = .clear
     
     enum TimingMode: String {
         case linear = "linear"
@@ -23,52 +25,51 @@ class Keyframe: NSObject {
         case easeOut = "easeOut"
         case easeInEaseOut = "easeInEaseOut"
     }
-    
-    override init() {
-        super.init()
+
+    init(position: CGPoint = .zero,
+         rotation: CGFloat = .zero,
+         size: CGSize = CGSize.zero,
+         scale: CGPoint = CGPoint(x: 1, y: 1),
+         timingMode: TimingMode = .linear,
+         colorBlendFactor: CGFloat = .zero,
+         alpha: CGFloat = 1.0,
+         color: UIColor = .clear) {
+
+        self.position = position
+        self.rotation = rotation
+        self.size = size
+        self.scale = scale
+        self.timingMode = timingMode
+        self.colorBlendFactor = colorBlendFactor
+        self.alpha = alpha
+        self.color = color
     }
-    
-    func sync(with node: IASpriteNode) {
-        position = node.position
-        rotation = node.zRotation
-        size = node.size
-        scale = CGPoint(x: node.xScale, y: node.yScale)
-    }
-    
+
     init(xmlElement: AEXMLElement) throws {
         
         guard xmlElement.name == IAXMLConstants.keyframeElement else {
             throw IAXMLParsingError.invalidXMLElement(message: "\(xmlElement.name) where were expected a keyframe xml element.")
         }
-        
-        guard let timingModeString = xmlElement.attributes[IAXMLConstants.timingModeAttribute],
-            let timingMode = TimingMode(rawValue: timingModeString) else {
-                throw IAXMLParsingError.invalidAttribute(message: "Expected \"position\" element into keyframe element.")
-        }
-        
-        guard let position = CGPoint(xmlElement: xmlElement[IAXMLConstants.positionElement]) else {
-            throw IAXMLParsingError.invalidXMLElement(message: "Expected \"position\" element into keyframe element.")
-        }
-        
-        guard let rotation = CGFloat(xmlElement: xmlElement[IAXMLConstants.rotationElement]) else {
-            throw IAXMLParsingError.invalidXMLElement(message: "Expected \"rotation\" element into keyframe element.")
-        }
-        
-        guard let size = CGSize(xmlElement: xmlElement[IAXMLConstants.sizeElement]) else {
-            throw IAXMLParsingError.invalidXMLElement(message: "Expected \"size\" element into keyframe element.")
-        }
-        
-        guard let scale = CGPoint(xmlElement: xmlElement[IAXMLConstants.scaleElement]) else {
-            throw IAXMLParsingError.invalidXMLElement(message: "Expected \"scale\" element into keyframe element.")
-        }
-        
 
-        self.timingMode = timingMode
-        self.position = position
-        self.rotation = rotation
-        self.size = size
-        self.scale = scale
-        
-        super.init()
+        if let timingModeString = xmlElement.attributes[IAXMLConstants.timingModeAttribute] {
+
+            self.timingMode = TimingMode(rawValue: timingModeString) ?? .linear
+
+        } else {
+
+            self.timingMode = .linear
+        }
+
+        self.position = CGPoint(xmlElement: xmlElement[IAXMLConstants.positionElement]) ?? .zero
+        self.rotation = CGFloat(xmlElement: xmlElement[IAXMLConstants.rotationElement]) ?? .zero
+        self.size = CGSize(xmlElement: xmlElement[IAXMLConstants.sizeElement]) ?? .zero
+        self.scale = CGPoint(xmlElement: xmlElement[IAXMLConstants.scaleElement]) ?? CGPoint(x: 1, y: 1)
+        self.color = UIColor(xmlElement: xmlElement[IAXMLConstants.colorElement])
+
+        let colorBlendFactorAttribute = xmlElement.attributes[IAXMLConstants.colorBlendFactorAttribute]
+        self.colorBlendFactor = colorBlendFactorAttribute?.toCGFloat() ?? 0
+
+        let alphaAttribute = xmlElement.attributes[IAXMLConstants.alphaAttribute]
+        self.alpha = alphaAttribute?.toCGFloat() ?? 1
     }
 }

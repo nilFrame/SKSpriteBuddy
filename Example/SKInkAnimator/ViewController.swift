@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  SKInkAnimator
 //
-//  Created by rafael.vrmoura@gmail.com on 03/15/2017.
-//  Copyright (c) 2017 rafael.vrmoura@gmail.com. All rights reserved.
+//  Created by Rafael Moura on 01/03/20223.
+//  Copyright © 2023 InkAnimator. All rights reserved.
 //
 
 import UIKit
@@ -14,21 +14,34 @@ class ViewController: UIViewController {
 
     var entity: IAEntity!
     var runningAnimationId: String?
+    var scene: SKScene!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let scene = SKScene(size: self.view.bounds.size)
+        self.scene = SKScene(size: self.view.bounds.size)
         scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        
-        self.entity = try! IAEntity(withName: "entity")
-        entity.position.y = -100
-        scene.addChild(entity)
+        scene.view?.showsFPS = true
 
-        entity.preload(animations: ["Idle", "Running"]) {
+        Task {
+            let entity = try! await IAEntity(withName: "Kani")
+            entity.position.y = -100
+            entity.xScale = 0.8
+            entity.yScale = 0.8
 
-            (self.view as! SKView).presentScene(scene)
+            try! await entity.preload(skins: ["Skin_rabbit",
+                                              "Skin_dog",
+                                              "Skin_dinosaur",
+                                              "Skin_dragon_2"])
+
+            try! await entity.preload(animations: ["Idle",
+                                                   "Running"])
+
+            scene.addChild(entity)
+            self.entity = entity
         }
+
+        (self.view as! SKView).presentScene(self.scene)
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,36 +51,56 @@ class ViewController: UIViewController {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 
-        let animationName: String
+        let animationName: String?
+
         switch self.runningAnimationId {
 
-        case "Running":
-            animationName = "Idle"
         case "Idle":
             animationName = "Running"
+        case "Running":
+            animationName = nil
         default:
             animationName = "Idle"
         }
 
-        self.entity.runForever(animationNamed: animationName)
+        if let animationName {
+
+            Task {
+
+                try! await self.entity.runForever(animationNamed: animationName)
+            }
+
+        } else {
+
+            self.entity.stopAnimations()
+        }
+
         self.runningAnimationId = animationName
     }
     
     @IBAction func didSelecSkin(_ sender: UISegmentedControl) {
-        
+
+        let selectedSkinName: String?
+
         switch sender.selectedSegmentIndex {
         case 0:
-            try! entity.setSkin(named: "Skin_rabbit")
+            selectedSkinName = "Skin_rabbit"
         case 1:
-            try! entity.setSkin(named: "Skin_dog")
+            selectedSkinName = "Skin_dog"
         case 2:
-            try! entity.setSkin(named: "Skin_dinosaur")
+            selectedSkinName = "Skin_dinosaur"
         case 3:
-            try! entity.setSkin(named: "Skin_dragon_2")
+            selectedSkinName = "Skin_dragon_2"
         default:
-            break
+            selectedSkinName = nil
         }
-        
+
+        guard let selectedSkinName else { return }
+
+        Task {
+
+            try! await entity.setSkin(named: selectedSkinName)
+        }
     }
 }
 

@@ -1,22 +1,15 @@
 PODS:
-  - AEXML (4.3.3)
-  - SKInkAnimator (1.0.3):
-    - AEXML (~> 4.3.3)
+  - SKInkAnimator (2.0.0)
 
 DEPENDENCIES:
   - SKInkAnimator (from `../`)
-
-SPEC REPOS:
-  trunk:
-    - AEXML
 
 EXTERNAL SOURCES:
   SKInkAnimator:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AEXML: 601f41fcaa7bda7605cad153b0f43db9ec006c0f
-  SKInkAnimator: da17eb5b92674f4222ff8b58c7a827f9d6ded69f
+  SKInkAnimator: 8e6bdd90998fc68d2f6fe03d1a83210ab75aab67
 
 PODFILE CHECKSUM: 6114310cb3c7ad00ada6abaa5018979810fee0b0
 

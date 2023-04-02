@@ -3,15 +3,20 @@
 //  Pods
 //
 //  Created by Rafael Moura on 15/03/17.
-//
+//  Copyright © 2023 InkAnimator. All rights reserved.
 //
 
 import Foundation
 import SpriteKit
-import AEXML
 
 public enum EntityParsingError: Error {
     case invalidEntityName
+}
+
+enum AnimationRunCount {
+
+    case times(Int)
+    case forever
 }
 
 public class IAEntity: SKNode {
@@ -19,14 +24,15 @@ public class IAEntity: SKNode {
     var size: CGSize
     private var document: AEXMLDocument
     private var loadedSkins = [String : IASkin]()
-    private var loadedAnimations = [String : IAAnimation]()
-    private var info = [NSUUID : String]()
+    private var loadedAnimations: [String : IAAnimation] = [:]
+    private var info: [UUID : String] = [:]
+    private var xmlElementByUUID: [UUID: AEXMLElement] = [:]
     
     //
     // MARK: - Initializers
     //
     
-    public convenience init(withName name: String) throws {
+    public convenience init(withName name: String) async throws {
         
         let document = try IAEntity.document(with: name)
         let skinsElement = document.root[IAXMLConstants.skinsElement]
@@ -36,21 +42,21 @@ public class IAEntity: SKNode {
             throw IAXMLParsingError.invalidAttribute(message: "Expecting \"name\" attribute in the skin element.")
         }
         
-        try self.init(xmlDocument: document, andSkin: defaultSkinName)
+        try await self.init(xmlDocument: document, andSkin: defaultSkinName)
         
         self.name = name
     }
     
-    public convenience init(withName name: String, andSkin skinName: String) throws {
+    public convenience init(withName name: String, andSkin skinName: String) async throws {
         
         let document = try IAEntity.document(with: name)
         
-        try self.init(xmlDocument: document, andSkin: skinName)
+        try await self.init(xmlDocument: document, andSkin: skinName)
         
         self.name = name
     }
     
-    private init(xmlDocument document: AEXMLDocument, andSkin skinName: String) throws {
+    private init(xmlDocument document: AEXMLDocument, andSkin skinName: String) async throws {
         
         let entityElement = document.root[IAXMLConstants.entityElement]
         let mainBoneElement = entityElement[IAXMLConstants.xmlElement]
@@ -68,143 +74,53 @@ public class IAEntity: SKNode {
        
         for childElement in childNodes.children {
             let node = try IASpriteNode(xmlElement: childElement)
+            self.xmlElementByUUID[node.uuid] = childElement
             self.addChild(node)
         }
         
         try self.loadEntityInfo()
-        try self.setSkin(named: skinName)
+        try await self.setSkin(named: skinName)
     }
     
     //
-    // NARK: - Skins stack
+    // MARK: - Skins stack
     //
+    
+    public func setSkin(named skinName: String) async throws {
 
-    private func loadEntityInfo() throws {
-        
-        let skinsElement = document.root[IAXMLConstants.skinsElement]
-        let entityInfoElement = skinsElement[IAXMLConstants.entityInfoElement]
-        
-        for boneElement in entityInfoElement.children {
-            
-            guard let uuidString = boneElement.attributes[IAXMLConstants.uuidAttribute], let uuid = NSUUID(uuidString: uuidString) else {
-                throw IAXMLParsingError.invalidAttribute(message: "Expected \"uuid\" attribute for bone element into entityInfo element")
-            }
-            
-            let textureElement = boneElement[IAXMLConstants.textureElement]
-            guard let textureName = textureElement.attributes[IAXMLConstants.nameAttribute] else {
-                throw IAXMLParsingError.invalidAttribute(message: "Expected \"name\" attribute for bone element into entityInfo element")
-            }
-            
-            self.info[uuid] = textureName
-        }
-    }
-    
-    public func setSkin(named skinName: String) throws {
-    
-        // get skin element into the xml document
         if let preloadedSkin = loadedSkins[skinName] {
-            loadTextures(for: preloadedSkin)
+
+            self.loadTextures(for: preloadedSkin)
             
-        }else {
-            try self.preload(skinNamed: skinName) {
-                
-                guard let skin = self.loadedSkins[skinName] else {
-                    return
-                }
-                
-                self.loadTextures(for: skin)
-            }
+        } else {
+
+            let skin = try await self.preload(skinNamed: skinName)
+            self.loadTextures(for: skin)
         }
     }
-    
-    private func loadTextures(for skin: IASkin) {
-        self.enumerateChildNodes(withName: ".//*", using: { (node, stop) in
-            
-            // Select just entity children that was maded with InkAnimator
-            guard let iaNode = node as? IASpriteNode else {
-                return
-            }
-            
-            iaNode.isHidden = !(skin.nodesVisibility[iaNode.uuid] ?? false)
-            
-            // Sets texture for visible nodes in the skin
-            if let texture = skin.texturesForNodes[iaNode.uuid], !iaNode.isHidden {
-                iaNode.texture = texture
-            }
-        })
-    }
-    
-    private func xmlElement(for skinName: String) -> AEXMLElement? {
-        
-        let skinsElement = self.document.root[IAXMLConstants.skinsElement]
-        
-        guard let skinElement = skinsElement.children.filter({ (element) -> Bool in
-            
-            if let nameAttribute = element.attributes[IAXMLConstants.nameAttribute], nameAttribute == skinName {
-                return true
-            }
-            
-            return false
-            
-        }).first else {
-            return nil
-        }
-        
-        return skinElement
-    }
-    
+
     public func releaseSkin(named skinName: String) {
-        loadedSkins.removeValue(forKey: skinName)
+        self.loadedSkins.removeValue(forKey: skinName)
     }
     
     //
     // MARK: - Entitty Preload stack
     //
     
-    public func preload(skinNamed skinName: String, completion: @escaping ()->()) throws {
-        guard let skinElement = self.xmlElement(for: skinName) else {
-            throw IAXMLParsingError.invalidXMLElement(message: "Skin named \(skinName) not found.")
-        }
-        
-        let skin = try IASkin(xmlElement: skinElement, entityInfo: self.info)
-        
-        skin.preload {
-            self.loadedSkins[skinName] = skin
-            completion()
-        }
-    }
-    
-    public func preload(skins names: [String], completion: @escaping ()->()) throws {
-        
-        var counter = 0
-        
-        for skinName in names {
-            
-            try self.preload(skinNamed: skinName, completion: {
-                
-                counter += 1
-                if counter == names.count {
-                    completion()
+    public func preload(skins names: [String]) async throws {
+
+        return await withThrowingTaskGroup(of: IASkin.self) { group in
+
+            for skinName in names {
+
+                group.addTask {
+
+                    try await self.preload(skinNamed: skinName)
                 }
-            })
+            }
         }
     }
-    
-    //
-    // MARK: - XML Document stack
-    //
-    
-    private static func document(with entityName: String) throws -> AEXMLDocument {
-        
-        guard let documentURL = Bundle.main.url(forResource: entityName, withExtension: ".xml") else {
-            throw EntityParsingError.invalidEntityName
-        }
-        
-        let xmlData = try Data(contentsOf: documentURL)
-        
-        return try AEXMLDocument(xml: xmlData)
-    }
-    
+
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -212,113 +128,63 @@ public class IAEntity: SKNode {
     //
     // MARK: - Animations stack
     //
-    
-    public func run(animationNamed animationName: String) {
-        
-        self.preload(animationNamed: animationName) {
-            
-            guard let animation = self.loadedAnimations[animationName] else {
-                return
+
+    public func stopAnimations() {
+
+        self.removeAllActions()
+
+        self.enumerateChildNodes(withName: ".//*") { (node, stop) in
+
+            node.removeAllActions()
+
+            if let iaNode = node as? IASpriteNode,
+               let xmlElement = self.xmlElementByUUID[iaNode.uuid] {
+
+                iaNode.configure(with: xmlElement)
             }
-            
-            self.run(animation, times: 1)
         }
     }
-    
-    public func run(animationNamed animationName: String, times: Int) {
-        
-        self.preload(animationNamed: animationName) {
-            
-            guard let animation = self.loadedAnimations[animationName] else {
-                return
-            }
-            
-            self.run(animation, times: times)
-        }
+
+    public func run(animationNamed animationName: String) async throws {
+
+        try await self.run(animationNamed: animationName, times: 1)
     }
-    
-    public func runForever(animationNamed animationName: String) {
-        
-        self.preload(animationNamed: animationName) {
-            
-            guard let animation = self.loadedAnimations[animationName] else {
-                return
-            }
-            
-            self.run(animation, times: -1)
-        }
-    }
-    
-    private func animation(named animationName: String) -> IAAnimation? {
-        
-        if let animation = loadedAnimations[animationName] {
-            
-            return animation
-            
+
+    public func run(animationNamed animationName: String,  times: Int) async throws {
+
+        if let loadedAnimation = self.loadedAnimations[animationName] {
+
+            self.run(loadedAnimation, .times(times))
+
         } else {
-            
-            guard let animationElement = animationXMLElement(for: animationName) else {
-                return nil
-            }
-            
-            let animation = try? IAAnimation(xmlElement: animationElement)
-            return animation
+
+            async let animation = try self.preloadAnimation(named: animationName)
+            try await self.run(animation, .times(times))
         }
     }
     
-    private func animationXMLElement(for animationName: String) -> AEXMLElement? {
+    public func runForever(animationNamed animationName: String) async throws {
         
-        let animationsElement = document.root[IAXMLConstants.animationsElement]
-        
-        guard let animationElement = animationsElement.children.filter({ (element) -> Bool in
-            
-            if let nameAttribute = element.attributes[IAXMLConstants.nameAttribute], nameAttribute == animationName {
-                return true
-            }
-            
-            return false
-            
-        }).first else {
-            return nil
-        }
-        
-        return animationElement
-    }
-    
-    public func preload(animationNamed animationName: String, completion: @escaping ()->()) {
-        
-        DispatchQueue.global(qos: .background).async {
-        
-            guard let animation = self.animation(named: animationName) else {
-                completion()
-                return
-            }
-            
-            DispatchQueue.main.async {
-                self.loadedAnimations[animationName] = animation
-                completion()
-            }
+        if let loadedAnimation = self.loadedAnimations[animationName] {
+
+            self.run(loadedAnimation, .forever)
+
+        } else {
+
+            async let animation = try self.preloadAnimation(named: animationName)
+            try await self.run(animation, .forever)
         }
     }
     
-    public func preload(animations names: [String], completion: @escaping ()->()) {
-        
-        DispatchQueue.global(qos: .background).async {
-            
-            var counter = 0
+    public func preload(animations names: [String]) async throws {
+
+        return await withThrowingTaskGroup(of: IAAnimation.self) { group in
+
             for animationName in names {
-                
-                guard let animation = self.animation(named: animationName) else {
-                    return
-                }
-                
-                self.loadedAnimations[animation.name] = animation
-                
-                counter += 1
-                if counter == names.count {
-                    DispatchQueue.main.async {
-                        completion()
-                    }
+
+                group.addTask {
+
+                    try await self.preloadAnimation(named: animationName)
                 }
             }
         }
@@ -328,34 +194,170 @@ public class IAEntity: SKNode {
 
         self.loadedAnimations.removeValue(forKey: animationName)
     }
-    
-    private func run(_ animation: IAAnimation, times: Int) {
+}
 
-        self.enumerateChildNodes(withName: ".//*",
-                                 using: { (node, stop) in
-            
+// MARK: - Private
+extension IAEntity {
+
+    //
+    // MARK: - Load textures
+    //
+    private func loadTextures(for skin: IASkin) {
+
+        self.enumerateChildNodes(withName: ".//*", using: { (node, stop) in
+
+            // Select just entity children that was maded with InkAnimator
             guard let iaNode = node as? IASpriteNode else {
                 return
             }
-            
+
+            iaNode.isHidden = !(skin.nodesVisibility[iaNode.uuid] ?? false)
+
+            // Sets texture for visible nodes in the skin
+            if let texture = skin.texturesForNodes[iaNode.uuid], !iaNode.isHidden {
+                iaNode.texture = texture
+            }
+        })
+    }
+
+    private func loadEntityInfo() throws {
+
+        let skinsElement = document.root[IAXMLConstants.skinsElement]
+        let entityInfoElement = skinsElement[IAXMLConstants.entityInfoElement]
+
+        for boneElement in entityInfoElement.children {
+
+            guard let uuidString = boneElement.attributes[IAXMLConstants.uuidAttribute], let uuid = UUID(uuidString: uuidString) else {
+                throw IAXMLParsingError.invalidAttribute(message: "Expected \"uuid\" attribute for bone element into entityInfo element")
+            }
+
+            let textureElement = boneElement[IAXMLConstants.textureElement]
+            guard let textureName = textureElement.attributes[IAXMLConstants.nameAttribute] else {
+                throw IAXMLParsingError.invalidAttribute(message: "Expected \"name\" attribute for bone element into entityInfo element")
+            }
+
+            self.info[uuid] = textureName
+        }
+    }
+
+    @discardableResult
+    private func preload(skinNamed skinName: String) async throws -> IASkin {
+
+        guard let skinElement = self.skinXMLElement(named: skinName) else {
+
+            throw IAXMLParsingError.invalidXMLElement(message: "Skin named \(skinName) not found.")
+        }
+
+        let skin = try IASkin(xmlElement: skinElement, entityInfo: self.info)
+
+        await skin.preload()
+        self.loadedSkins[skinName] = skin
+
+        return skin
+    }
+
+    //
+    // MARK: - Document
+    //
+    private static func document(with entityName: String) throws -> AEXMLDocument {
+
+        guard let documentURL = Bundle.main.url(forResource: entityName, withExtension: ".xml") else {
+            throw EntityParsingError.invalidEntityName
+        }
+
+        let xmlData = try Data(contentsOf: documentURL)
+
+        return try AEXMLDocument(xmlData: xmlData)
+    }
+
+    private func skinXMLElement(named skinName: String) -> AEXMLElement? {
+
+        let skinsElement = self.document.root[IAXMLConstants.skinsElement]
+
+        return skinsElement.children.first {
+
+            let nameAttribute = $0.attributes[IAXMLConstants.nameAttribute]
+            return nameAttribute == skinName
+        }
+    }
+
+    //
+    // MARK: - Actions
+    //
+
+    @discardableResult
+    private func preloadAnimation(named animationName: String) async throws -> IAAnimation {
+
+        async let animation = try self.animation(named: animationName)
+        try await self.loadedAnimations[animationName] = animation
+        return try await animation
+    }
+
+    private func run(_ animation: IAAnimation, _ times: AnimationRunCount) {
+
+        self.enumerateChildNodes(withName: ".//*",
+                                 using: { (node, stop) in
+
+            node.removeAllActions()
+
+            guard let iaNode = node as? IASpriteNode else {
+                return
+            }
+
             if let action = animation.actions[iaNode.uuid] {
 
-                iaNode.removeAllActions()
 
                 if let startKeyframe = animation.startingKeyframeForBone[iaNode.uuid] {
 
                     iaNode.configure(with: startKeyframe)
                 }
-                
-                if times < 0 {
 
-                    iaNode.run(SKAction.repeatForever(action))
+                switch times {
 
-                } else {
+                case .times(let times):
 
                     iaNode.run(SKAction.repeat(action, count: times))
+
+                case .forever:
+
+                    iaNode.run(SKAction.repeatForever(action))
                 }
             }
         })
+    }
+
+    private func animation(named animationName: String) async throws -> IAAnimation {
+
+        if let animation = loadedAnimations[animationName] {
+
+            return animation
+
+        } else {
+
+            guard let animationElement = self.animationXMLElement(for: animationName) else {
+
+                throw IAXMLParsingError.invalidXMLElement(message: "Animation named \(animationName) not found.")
+            }
+
+            return try await withUnsafeThrowingContinuation { continuation in
+
+                Task.detached(priority: .background) {
+
+                    let animation = try IAAnimation(xmlElement: animationElement)
+                    continuation.resume(with: .success(animation))
+                }
+            }
+        }
+    }
+
+    private func animationXMLElement(for animationName: String) -> AEXMLElement? {
+
+        let animationsElement = document.root[IAXMLConstants.animationsElement]
+
+        return animationsElement.children.first {
+
+            let nameAttribute = $0.attributes[IAXMLConstants.nameAttribute]
+            return nameAttribute == animationName
+        }
     }
 }

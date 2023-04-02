@@ -3,11 +3,10 @@
 //  Pods
 //
 //  Created by Rafael Moura on 16/03/17.
-//
+//  Copyright © 2023 InkAnimator. All rights reserved.
 //
 
 import Foundation
-import AEXML
 
 class KeyframeWrapper: NSObject {
 
@@ -148,19 +147,73 @@ class KeyframeWrapper: NSObject {
         let deltaHeight = nextKeyframe.size.height - previousKeyframe.size.height
         let relativeHeight = (deltaHeight / CGFloat(deltaFrame)) * CGFloat(relativeFrame)
         let relativeSize = CGSize(width: relativeWidth, height: relativeHeight)
-        
+
+
         let deltaXScale = nextKeyframe.scale.x - previousKeyframe.scale.x
         let relativeXScale = (deltaXScale / CGFloat(deltaFrame)) * CGFloat(relativeFrame)
         let deltaYScale = nextKeyframe.scale.y - previousKeyframe.scale.y
         let relativeYScale = (deltaYScale / CGFloat(deltaFrame)) * CGFloat(relativeFrame)
         let relativeScale = CGPoint(x: relativeXScale, y: relativeYScale)
-        
-        let relativeKey = Keyframe()
-        relativeKey.position = CGPoint(x: previousKeyframe.position.x + relativePosition.x, y: previousKeyframe.position.y + relativePosition.y)
+
+        let deltaAlpha = nextKeyframe.alpha - previousKeyframe.alpha
+        let relativeAlpha = (deltaAlpha / CGFloat(deltaFrame)) * CGFloat(relativeFrame)
+
+        let deltaColorBlendFactor = nextKeyframe.colorBlendFactor - previousKeyframe.colorBlendFactor
+        let relativeColorBlendFactor = (deltaColorBlendFactor / CGFloat(deltaFrame)) * CGFloat(relativeFrame)
+
+        var relativeKey = Keyframe()
+
+        relativeKey.position = CGPoint(x: previousKeyframe.position.x + relativePosition.x,
+                                       y: previousKeyframe.position.y + relativePosition.y)
+
+        relativeKey.size = CGSize(width: previousKeyframe.size.width + relativeSize.width,
+                                  height: previousKeyframe.size.height + relativeSize.height)
+
+        relativeKey.scale = CGPoint(x: previousKeyframe.scale.x + relativeScale.x,
+                                    y: previousKeyframe.scale.y + relativeScale.y)
+
         relativeKey.rotation = previousKeyframe.rotation + relativeRotation
-        relativeKey.size = CGSize(width: previousKeyframe.size.width + relativeSize.width, height: previousKeyframe.size.height + relativeSize.height)
-        relativeKey.scale = CGPoint(x: previousKeyframe.scale.x + relativeScale.x, y: previousKeyframe.scale.y + relativeScale.y)
-        
+        relativeKey.alpha = previousKeyframe.alpha + relativeAlpha
+        relativeKey.colorBlendFactor = previousKeyframe.colorBlendFactor + relativeColorBlendFactor
+
+        relativeKey.color = previousKeyframe.color.relativeColor(for: nextKeyframe.color,
+                                                                 deltaFrame: deltaFrame,
+                                                                 relativeFrame: relativeFrame)
+
         return relativeKey
+    }
+}
+
+private extension UIColor {
+
+    func relativeColor(for color: UIColor, deltaFrame: Int, relativeFrame: Int) -> UIColor {
+
+        let deltaFrameFloat = CGFloat(deltaFrame)
+        let relativeFrameFloat = CGFloat(relativeFrame)
+
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+        var alpha: CGFloat = 0
+
+        _ = self.getRed(&red,
+                        green: &green,
+                        blue: &blue,
+                        alpha: &alpha)
+
+        var relativeRed: CGFloat = 0
+        var relativeGreen: CGFloat = 0
+        var relativeBlue: CGFloat = 0
+        var relativeAlpha: CGFloat = 0
+
+        _ = color.getRed(&relativeRed,
+                         green: &relativeGreen,
+                         blue: &relativeBlue,
+                         alpha: &relativeAlpha)
+
+        return UIColor(red: red + (((relativeRed - red) / deltaFrameFloat) * relativeFrameFloat),
+                       green: green + (((relativeGreen - green) / deltaFrameFloat) * relativeFrameFloat),
+                       blue: blue + (((relativeBlue - blue) / deltaFrameFloat) * relativeFrameFloat),
+                       alpha: alpha + (((relativeAlpha - alpha) / deltaFrameFloat) * relativeFrameFloat))
     }
 }

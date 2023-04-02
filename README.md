@@ -27,38 +27,34 @@ it, simply add the following line to your Podfile:
 ```swift
 import SKInkAnimator
 ...
-let entity = IAEntity(withName: "EntityName")
+let entity = try await IAEntity(withName: "EntityName")
 self.scene.addChild(entity)
 ```
 
 #### Setting entity's skins:
 ```swift
-entity.setSkin(named: "Dark_Knight")
+try await entity.setSkin(named: "Dark_Knight")
 ```
 #### Running animations:
 ```swift
 // run the animation once
-entity.run(animationNamed: "Running")
+try await entity.run(animationNamed: "Running")
 
 // Run the animation 3 times
-entity.run(animationNamed: "Idle" , times: 3)
+try await entity.run(animationNamed: "Idle" , times: 3)
 
 // Run the animation forever
-entity.runForever(animationNamed: "Running")
+try await entity.runForever(animationNamed: "Running")
 ```
 
 #### Preloading Skins:
 
 ```swift
 // Preloading the textures for skin named "Knight"
-entity.preload(skinNamed: "Knight") {
-// Callback
-}
+try await entity.preload(skinNamed: "Knight")
 
 // Preloading textures for a set of skins
-entity.preload(skins: ["Dark_Knight", "Light_Knight", "Golden_Knight"]) {
-// Callback
-}
+try await entity.preload(skins: ["Dark_Knight", "Light_Knight", "Golden_Knight"])
 
 // Releasing unused textures from memory
 entity.releaseSkin(named: "Dark_Knight")
@@ -68,14 +64,10 @@ entity.releaseSkin(named: "Dark_Knight")
 
 ```swift
 // Preloading the animation named "Running"
-entity.preload(animationNamed: "Running") {
-// Callback    
-}
+try await entity.preload(animationNamed: "Running")
 
 // Preloading a set of animations
-entity.preload(animations: ["Running", "Idle"]) {
-// Callback
-}
+try await entity.preload(animations: ["Running", "Idle"])
 
 // Releasing unused animations from memory
 entity.releaseAnimation(named: "Running")

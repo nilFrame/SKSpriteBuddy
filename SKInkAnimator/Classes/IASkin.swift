@@ -3,23 +3,22 @@
 //  Pods
 //
 //  Created by Rafael Moura on 16/03/17.
-//
+//  Copyright © 2023 InkAnimator. All rights reserved.
 //
 
 import Foundation
-import AEXML
 import SpriteKit
 
 class IASkin: NSObject {
 
     private(set) var name: String
-    var texturesForNodes: [NSUUID : SKTexture]
-    var nodesVisibility: [NSUUID : Bool]
+    var texturesForNodes: [UUID : SKTexture]
+    var nodesVisibility: [UUID : Bool]
     
-    init(xmlElement: AEXMLElement, entityInfo: [NSUUID : String]) throws {
+    init(xmlElement: AEXMLElement, entityInfo: [UUID : String]) throws {
         
-        self.texturesForNodes = [NSUUID : SKTexture]()
-        self.nodesVisibility = [NSUUID : Bool]()
+        self.texturesForNodes = [UUID : SKTexture]()
+        self.nodesVisibility = [UUID : Bool]()
         
         guard let skinName = xmlElement.attributes[IAXMLConstants.nameAttribute] else {
             throw IAXMLParsingError.invalidAttribute(message: "Expected \"name\" attribute in skin element")
@@ -29,7 +28,7 @@ class IASkin: NSObject {
         
         for element in xmlElement.children {
             
-            guard let uuidString = element.attributes[IAXMLConstants.uuidAttribute], let uuid = NSUUID(uuidString: uuidString) else {
+            guard let uuidString = element.attributes[IAXMLConstants.uuidAttribute], let uuid = UUID(uuidString: uuidString) else {
                 throw IAXMLParsingError.invalidAttribute(message: "Expected \"uuid\" attribute in bone element into skin element")
             }
             
@@ -52,22 +51,13 @@ class IASkin: NSObject {
         super.init()
     }
     
-    func preload(_ completion: @escaping ()->()) {
-        SKTexture.preload(Array(self.texturesForNodes.values), withCompletionHandler: completion)
-    }
-    
-    static func preload(skins: [IASkin], completion: @escaping ()->()){
-        
-        var counter = 0
-        
-        for skin in skins {
-            
-            skin.preload {
-                
-                counter += 1
-                if counter == skins.count {
-                    completion()
-                }
+    func preload() async {
+
+        return await withCheckedContinuation { continuation in
+
+            SKTexture.preload(Array(self.texturesForNodes.values)) {
+
+                continuation.resume()
             }
         }
     }

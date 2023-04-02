@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  SKInkAnimator
 //
-//  Created by rafael.vrmoura@gmail.com on 03/15/2017.
-//  Copyright (c) 2017 rafael.vrmoura@gmail.com. All rights reserved.
+//  Created by Rafael Moura on 01/03/20223.
+//  Copyright © 2023 InkAnimator. All rights reserved.
 //
 
 import UIKit

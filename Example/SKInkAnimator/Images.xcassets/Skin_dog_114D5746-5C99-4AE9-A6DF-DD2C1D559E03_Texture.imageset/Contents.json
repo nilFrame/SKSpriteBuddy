@@ -1,33 +1,31 @@
 {
   "images" : [
     {
-      "idiom" : "iphone",
       "filename" : "Skin_dog_114D5746-5C99-4AE9-A6DF-DD2C1D559E03_Texture.png",
+      "idiom" : "iphone",
       "scale" : "1x"
     },
     {
-      "idiom" : "iphone",
       "filename" : "Skin_dog_114D5746-5C99-4AE9-A6DF-DD2C1D559E03_Texture@2x.png",
+      "idiom" : "iphone",
       "scale" : "2x"
     },
     {
-      "idiom" : "iphone",
       "filename" : "Skin_dog_114D5746-5C99-4AE9-A6DF-DD2C1D559E03_Texture@3x.png",
+      "idiom" : "iphone",
       "scale" : "3x"
     },
     {
       "idiom" : "ipad",
-      "filename" : "Skin_dog_114D5746-5C99-4AE9-A6DF-DD2C1D559E03_Texture~ipad.png",
       "scale" : "1x"
     },
     {
       "idiom" : "ipad",
-      "filename" : "Skin_dog_114D5746-5C99-4AE9-A6DF-DD2C1D559E03_Texture@2x~ipad.png",
       "scale" : "2x"
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
   }
 }
