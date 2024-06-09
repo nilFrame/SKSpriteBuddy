@@ -20,7 +20,7 @@ Always that you export your assets in the Sprite Buddy app, the iPad app exports
   s.homepage         = 'https://spritebuddy.com'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'rafael.vrmoura@gmail.com' => 'rafael.vrmoura@gmail.com' }
-  s.source           = { :git => 'https://github.com/nilFrame/SKSpriteBuddy/SKSpriteBuddy.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/nilFrame/SKSpriteBuddy.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '16.0'
 
