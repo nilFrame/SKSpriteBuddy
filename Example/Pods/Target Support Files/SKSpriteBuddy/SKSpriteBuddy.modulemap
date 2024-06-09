@@ -1,0 +1,6 @@
+framework module SKSpriteBuddy {
+  umbrella header "SKSpriteBuddy-umbrella.h"
+
+  export *
+  module * { export * }
+}

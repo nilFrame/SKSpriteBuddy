@@ -7,126 +7,118 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01EC37BDFF353E47DDA1CC779760FC1F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149A5206C9F617AE8F5CDE9B1BE0E170 /* Foundation.framework */; };
-		046E01D5C04E4FF07A005393C41B4871 /* Pods-SKInkAnimator_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE1237589A3C7D2D99E4025A471E13A /* Pods-SKInkAnimator_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1A2AD67897FC4100C7AF4C4A7F511601 /* Pods-SKInkAnimator_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C442B33CED5BF920AB4507D802AF5 /* Pods-SKInkAnimator_Tests-dummy.m */; };
-		320927FFFE678B259ACE9204A990A529 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7968417A28A42E2CEF2156A227DD69F9 /* XMLParser.swift */; };
-		3FA654E95C8159F639FC594386E96029 /* ActionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9CAE9EB86EF39594892D5B4B3BF7B5 /* ActionFactory.swift */; };
-		64D152BB176BBED01EA2B1A94F20D545 /* SKInkAnimator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B26F1F71E51DDF9E308EFE054B0CAB2 /* SKInkAnimator-dummy.m */; };
-		6E891A6523687AC8D55BCD0B8C661CFE /* Pods-SKInkAnimator_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 83782788015F31346CF6617058643D45 /* Pods-SKInkAnimator_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7CA501005C3ED8989F4886FB1926F833 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149A5206C9F617AE8F5CDE9B1BE0E170 /* Foundation.framework */; };
-		80F7DFDD766EDDAB1C480B9CBF16A08F /* IAEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6630F6232C1D5E22CDECD134254E31 /* IAEntity.swift */; };
-		9E798EF6EE5E98DB4F936703E370DFA9 /* IAAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A234F530C717155AEB009DF35497B94 /* IAAnimation.swift */; };
-		A4F10F329DF3E7C2EB1776D6C3F9CABB /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA028B03A4584BD7D3334DAFCC0C38 /* Utils.swift */; };
-		ABF4A9F0E0C2486C96EE4A09086E5FA4 /* IASkin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBA41209974E90C245E118E6D2770D9 /* IASkin.swift */; };
-		C8988466EA28951D8631541BA418F5EE /* Pods-SKInkAnimator_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FDA3A65CB22960039F3B7416DA0D1F /* Pods-SKInkAnimator_Example-dummy.m */; };
-		D75423F5175646927A272C2AFAC52D2A /* SKInkAnimator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CEC39B0FCD5608AB1A9109BF25A32D86 /* SKInkAnimator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D9138F1485AA75473241E558B3C8D88C /* IASpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC34523DC9214F04094E1FF85F482CCE /* IASpriteNode.swift */; };
-		D96B61C40F99A5387955F9C4F8042F4E /* Keyframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47895612FAD7510C95EFF115037F1B22 /* Keyframe.swift */; };
-		E0D35E1D2ADD137F6EAAF2720DF8C16B /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1785FEFE3B1DEF0D8CEEBF2266984ED4 /* SpriteKit.framework */; };
-		E6F240441CB64E802662BC6D111D9955 /* KeyframeWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB400F1E1BB338A51D23DC5C398A23B /* KeyframeWrapper.swift */; };
-		F1E3495126E4DDB621A2CE9C7F5733A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149A5206C9F617AE8F5CDE9B1BE0E170 /* Foundation.framework */; };
+		0CAA2F88B8E9E0F7B40C5A9D6F38E617 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149A5206C9F617AE8F5CDE9B1BE0E170 /* Foundation.framework */; };
+		0FF25677AF4B7D5C56593E10FAF4D151 /* Pods-SKSpriteBuddy_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AE9495D133E7FC1DB11C8DAABDB7C4 /* Pods-SKSpriteBuddy_Tests-dummy.m */; };
+		1786527B7EE9BDB722D305514EC7DDF5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149A5206C9F617AE8F5CDE9B1BE0E170 /* Foundation.framework */; };
+		30D497A8749102815C7388C96E743D76 /* IAAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1679A2CF769477960332F9B4389D2A /* IAAnimation.swift */; };
+		32BE178A3D06DD0A55ACE5ABAFF63375 /* KeyframeWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6559A5B0346594F7F53C1C95FDC9F02 /* KeyframeWrapper.swift */; };
+		53397E5BECAC75361AD61F8318ECB35B /* ActionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E54A990461A00F38EA9EDA098BF7B8 /* ActionFactory.swift */; };
+		57D902D924551BF6474A788E5B5D25B6 /* SKSpriteBuddy-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 793AD589508B3DFE1C66680541D8DFF1 /* SKSpriteBuddy-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BD0ACBC1C93BE94822A9746941383D6 /* IASkin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75CC4EA8D65E982E64C376E8A9A701 /* IASkin.swift */; };
+		7440A032C288DF1083EA9A9DB2398078 /* Keyframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE450AD829F57032B51214702455E1D7 /* Keyframe.swift */; };
+		90A459557321A516310EC3B5227DCC31 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1785FEFE3B1DEF0D8CEEBF2266984ED4 /* SpriteKit.framework */; };
+		97ED24ECE4EA7A3395A0B7E6DE090805 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149A5206C9F617AE8F5CDE9B1BE0E170 /* Foundation.framework */; };
+		A26136D105B8BF7CB3F6D5FF4D292F7C /* Pods-SKSpriteBuddy_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 338A0520DDA5B12B1BACB224A383E715 /* Pods-SKSpriteBuddy_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9E0DDDA551F935836C9DC337990BAFC /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1F083F29E792BEA9E5ECFE35EBFE42 /* Utils.swift */; };
+		D20262763678D18213A1B3A4EBD173E3 /* Pods-SKSpriteBuddy_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CB3890B8534DD7F6CCD758612A1ED8 /* Pods-SKSpriteBuddy_Example-dummy.m */; };
+		D9854A91C9343C8E0C7B947082735956 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF0AA3739E2D91F260ED38BA4FBA2EC /* XMLParser.swift */; };
+		E4D32D9336BFEAF16D542D53E1757ED8 /* IASpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACF9B467D59D08B2511946330631B75 /* IASpriteNode.swift */; };
+		E64FEDB194A98347F58D632691CCD5E5 /* Pods-SKSpriteBuddy_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D1EE7DD5F3B4FAF3A6B34488380C3D02 /* Pods-SKSpriteBuddy_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4A4E6B331B830B76103C7C5EEEE4924 /* IAEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9795EF6E211B4B27A3D3470C9365187 /* IAEntity.swift */; };
+		F67D43A79543053D5B7FEDEDE656429C /* SKSpriteBuddy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4119D1B96D6D0A86208EC8CE2AD59FE3 /* SKSpriteBuddy-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		335BC5CB1314C21017E33BA2D2B78317 /* PBXContainerItemProxy */ = {
+		51515EB1A97EDCF14B090329D25207A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 924686BB8900D2CB07C02C41D7FB36F7;
-			remoteInfo = "Pods-SKInkAnimator_Example";
+			remoteGlobalIDString = B222BF1134E9652034A93AA16BE47ACC;
+			remoteInfo = "Pods-SKSpriteBuddy_Example";
 		};
-		9B6F82548FEA1D8B068D466DD078B892 /* PBXContainerItemProxy */ = {
+		CE12287EA0D12055CB8449DF1D352012 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F1ED2A1ECB0BFD73856B9CB2DCE9049B;
-			remoteInfo = SKInkAnimator;
+			remoteGlobalIDString = E5E7608EEFAC4DAC2F247CE61AB7FB77;
+			remoteInfo = SKSpriteBuddy;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		038C8D0ABA89F01ADE8A29F601BF3179 /* SKInkAnimator-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SKInkAnimator-Info.plist"; sourceTree = "<group>"; };
-		0D42843957D19D12827129CA315A77C8 /* Pods-SKInkAnimator_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SKInkAnimator_Example-Info.plist"; sourceTree = "<group>"; };
+		0B1AE1CE02AD0E7067FB1DA8631E07DD /* Pods-SKSpriteBuddy_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SKSpriteBuddy_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		0E990F35EBB418856F5852B8786D3FCF /* Pods-SKSpriteBuddy_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SKSpriteBuddy_Tests-Info.plist"; sourceTree = "<group>"; };
+		11CB3890B8534DD7F6CCD758612A1ED8 /* Pods-SKSpriteBuddy_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SKSpriteBuddy_Example-dummy.m"; sourceTree = "<group>"; };
 		149A5206C9F617AE8F5CDE9B1BE0E170 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		1785FEFE3B1DEF0D8CEEBF2266984ED4 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/SpriteKit.framework; sourceTree = DEVELOPER_DIR; };
-		1BE1237589A3C7D2D99E4025A471E13A /* Pods-SKInkAnimator_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SKInkAnimator_Example-umbrella.h"; sourceTree = "<group>"; };
-		295DA71D281C914EB289CDE381BDE4BA /* SKInkAnimator */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SKInkAnimator; path = SKInkAnimator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		29FDA3A65CB22960039F3B7416DA0D1F /* Pods-SKInkAnimator_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SKInkAnimator_Example-dummy.m"; sourceTree = "<group>"; };
-		315198DD4FC4BB337D0109D82DD85D0B /* SKInkAnimator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SKInkAnimator.release.xcconfig; sourceTree = "<group>"; };
-		3BFC06DA4EB7D0CA96F68BEDDEF3AEF9 /* Pods-SKInkAnimator_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SKInkAnimator_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		47895612FAD7510C95EFF115037F1B22 /* Keyframe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keyframe.swift; path = SKInkAnimator/Classes/Keyframe.swift; sourceTree = "<group>"; };
-		4899DA1E5F6C8F6AD22EB30D1BD355AE /* Pods-SKInkAnimator_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKInkAnimator_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		4A234F530C717155AEB009DF35497B94 /* IAAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IAAnimation.swift; path = SKInkAnimator/Classes/IAAnimation.swift; sourceTree = "<group>"; };
-		4B26F1F71E51DDF9E308EFE054B0CAB2 /* SKInkAnimator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SKInkAnimator-dummy.m"; sourceTree = "<group>"; };
-		59130B3C042417C892FB9CCB381D827D /* Pods-SKInkAnimator_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SKInkAnimator_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		615908C11BD1AE8153E13EF24343CC2F /* SKInkAnimator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SKInkAnimator.debug.xcconfig; sourceTree = "<group>"; };
-		776644BB42F2E0C2477CF180F64432AE /* Pods-SKInkAnimator_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SKInkAnimator_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		7968417A28A42E2CEF2156A227DD69F9 /* XMLParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
-		7A4FA3A24431649B8C028354398A1ACA /* Pods-SKInkAnimator_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SKInkAnimator_Tests.modulemap"; sourceTree = "<group>"; };
-		7B9CAE9EB86EF39594892D5B4B3BF7B5 /* ActionFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionFactory.swift; path = SKInkAnimator/Classes/ActionFactory.swift; sourceTree = "<group>"; };
-		7CBA41209974E90C245E118E6D2770D9 /* IASkin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IASkin.swift; path = SKInkAnimator/Classes/IASkin.swift; sourceTree = "<group>"; };
-		83782788015F31346CF6617058643D45 /* Pods-SKInkAnimator_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SKInkAnimator_Tests-umbrella.h"; sourceTree = "<group>"; };
-		8878D139779BB453D093E06D4D651673 /* Pods-SKInkAnimator_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKInkAnimator_Example.release.xcconfig"; sourceTree = "<group>"; };
+		187F2DA5C547BC6CAE10A6896A5B10E7 /* Pods-SKSpriteBuddy_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SKSpriteBuddy_Example.modulemap"; sourceTree = "<group>"; };
+		2C1F083F29E792BEA9E5ECFE35EBFE42 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		31D5291A5510754EDF33D8892A61C36B /* Pods-SKSpriteBuddy_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKSpriteBuddy_Example.release.xcconfig"; sourceTree = "<group>"; };
+		338A0520DDA5B12B1BACB224A383E715 /* Pods-SKSpriteBuddy_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SKSpriteBuddy_Tests-umbrella.h"; sourceTree = "<group>"; };
+		3CD296DAF1D131914E6F395AF4D4BBB3 /* Pods-SKSpriteBuddy_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SKSpriteBuddy_Tests.modulemap"; sourceTree = "<group>"; };
+		4119D1B96D6D0A86208EC8CE2AD59FE3 /* SKSpriteBuddy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SKSpriteBuddy-dummy.m"; sourceTree = "<group>"; };
+		423974EBC125E931FDE2575244C44DB6 /* SKSpriteBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SKSpriteBuddy.debug.xcconfig; sourceTree = "<group>"; };
+		4B9B78BFC8D9A85C9D9FB958AD5DDB6F /* Pods-SKSpriteBuddy_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SKSpriteBuddy_Example-frameworks.sh"; sourceTree = "<group>"; };
+		4E3001F643181FBC2F0EE04406E67625 /* SKSpriteBuddy.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SKSpriteBuddy.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5681D141B7309426EE0700DEDA0B47CC /* SKSpriteBuddy-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SKSpriteBuddy-prefix.pch"; sourceTree = "<group>"; };
+		5ADF76DFDC88263AC153F53205B479AD /* SKSpriteBuddy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SKSpriteBuddy.modulemap; sourceTree = "<group>"; };
+		5D1679A2CF769477960332F9B4389D2A /* IAAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IAAnimation.swift; path = SKSpriteBuddy/Classes/IAAnimation.swift; sourceTree = "<group>"; };
+		6F0AA99BDB6267BADDD1429F54CCB0E7 /* Pods-SKSpriteBuddy_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SKSpriteBuddy_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6FF0AA3739E2D91F260ED38BA4FBA2EC /* XMLParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
+		74AE9495D133E7FC1DB11C8DAABDB7C4 /* Pods-SKSpriteBuddy_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SKSpriteBuddy_Tests-dummy.m"; sourceTree = "<group>"; };
+		793AD589508B3DFE1C66680541D8DFF1 /* SKSpriteBuddy-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SKSpriteBuddy-umbrella.h"; sourceTree = "<group>"; };
+		8008F5D9A059C1A745CE856536F996C8 /* SKSpriteBuddy-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SKSpriteBuddy-Info.plist"; sourceTree = "<group>"; };
+		84D56701653C26B5302BBA980B7D76EF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		92E54A990461A00F38EA9EDA098BF7B8 /* ActionFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionFactory.swift; path = SKSpriteBuddy/Classes/ActionFactory.swift; sourceTree = "<group>"; };
+		95E290F4A9DABF1952F46A0FD2B22C4E /* SKSpriteBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SKSpriteBuddy.release.xcconfig; sourceTree = "<group>"; };
+		9777720E4E82862522040D550789A971 /* Pods-SKSpriteBuddy_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SKSpriteBuddy_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9E90044A80BCE3DE023131222FA999EC /* Pods-SKInkAnimator_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKInkAnimator_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		9F6630F6232C1D5E22CDECD134254E31 /* IAEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IAEntity.swift; path = SKInkAnimator/Classes/IAEntity.swift; sourceTree = "<group>"; };
-		9FE2C36CC753ED0CB7FF5D7E34A1DEA9 /* SKInkAnimator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SKInkAnimator-prefix.pch"; sourceTree = "<group>"; };
-		A471B6F6F91CCF8C0E485E86BA90EB69 /* Pods-SKInkAnimator_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SKInkAnimator_Example.modulemap"; sourceTree = "<group>"; };
-		ADB400F1E1BB338A51D23DC5C398A23B /* KeyframeWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyframeWrapper.swift; path = SKInkAnimator/Classes/KeyframeWrapper.swift; sourceTree = "<group>"; };
-		B9530EB3B89567448846ACA21537C643 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		BFCF9165B8F838E520DC6D6E05E1BAAE /* Pods-SKInkAnimator_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKInkAnimator_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		C24B8E6DA6E3191D15BEEF6D84486D5C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		C7A85852A86D44C0CB655CB7A071782C /* Pods-SKInkAnimator_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SKInkAnimator_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		C866A2E29DA3048304FB02A7C7F1F92E /* Pods-SKInkAnimator_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SKInkAnimator_Example-frameworks.sh"; sourceTree = "<group>"; };
-		CB91F069C9CB201C41C67EFECFEC1BFE /* Pods-SKInkAnimator_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SKInkAnimator_Example"; path = Pods_SKInkAnimator_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEC39B0FCD5608AB1A9109BF25A32D86 /* SKInkAnimator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SKInkAnimator-umbrella.h"; sourceTree = "<group>"; };
-		CEDA028B03A4584BD7D3334DAFCC0C38 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		EC34523DC9214F04094E1FF85F482CCE /* IASpriteNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IASpriteNode.swift; path = SKInkAnimator/Classes/IASpriteNode.swift; sourceTree = "<group>"; };
-		EC6DBF4A328536AB847461FDBB942442 /* SKInkAnimator.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SKInkAnimator.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		ED2C442B33CED5BF920AB4507D802AF5 /* Pods-SKInkAnimator_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SKInkAnimator_Tests-dummy.m"; sourceTree = "<group>"; };
-		F38F175387A821375688DF3B066638C6 /* Pods-SKInkAnimator_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SKInkAnimator_Tests-Info.plist"; sourceTree = "<group>"; };
-		FCDF4EB48469C89E27039D7FA6F5C0D9 /* SKInkAnimator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SKInkAnimator.modulemap; sourceTree = "<group>"; };
-		FEAD13C435EB30446F6CECDD3E6CE7EB /* Pods-SKInkAnimator_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SKInkAnimator_Tests"; path = Pods_SKInkAnimator_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EB0B5CD1196381A6ED505BA22985334 /* Pods-SKSpriteBuddy_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SKSpriteBuddy_Tests"; path = Pods_SKSpriteBuddy_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A75F3D98BF3659E7D6896814D4707FB6 /* Pods-SKSpriteBuddy_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SKSpriteBuddy_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AACF9B467D59D08B2511946330631B75 /* IASpriteNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IASpriteNode.swift; path = SKSpriteBuddy/Classes/IASpriteNode.swift; sourceTree = "<group>"; };
+		B15890700B5B0F6C20F610C382AA4367 /* Pods-SKSpriteBuddy_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKSpriteBuddy_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B5EBBF2C5C19D34EC315691DC418D153 /* Pods-SKSpriteBuddy_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SKSpriteBuddy_Example-Info.plist"; sourceTree = "<group>"; };
+		BE8F2AF902EBF7D0FE8EB0607F8D2FE7 /* Pods-SKSpriteBuddy_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SKSpriteBuddy_Example"; path = Pods_SKSpriteBuddy_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C202847C040CAD010C663F01B2C20A46 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		D1EE7DD5F3B4FAF3A6B34488380C3D02 /* Pods-SKSpriteBuddy_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SKSpriteBuddy_Example-umbrella.h"; sourceTree = "<group>"; };
+		D6C7501481E5C32887767EA62EB3356C /* Pods-SKSpriteBuddy_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKSpriteBuddy_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		DE450AD829F57032B51214702455E1D7 /* Keyframe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keyframe.swift; path = SKSpriteBuddy/Classes/Keyframe.swift; sourceTree = "<group>"; };
+		E9795EF6E211B4B27A3D3470C9365187 /* IAEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IAEntity.swift; path = SKSpriteBuddy/Classes/IAEntity.swift; sourceTree = "<group>"; };
+		EA08CE599A91F0E9DE52874FB00E7C86 /* SKSpriteBuddy */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SKSpriteBuddy; path = SKSpriteBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF05AF707156D592CB38B29B7D948BC2 /* Pods-SKSpriteBuddy_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKSpriteBuddy_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		F6559A5B0346594F7F53C1C95FDC9F02 /* KeyframeWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyframeWrapper.swift; path = SKSpriteBuddy/Classes/KeyframeWrapper.swift; sourceTree = "<group>"; };
+		FB75CC4EA8D65E982E64C376E8A9A701 /* IASkin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IASkin.swift; path = SKSpriteBuddy/Classes/IASkin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		20C32CD578B562D973D083A28552D933 /* Frameworks */ = {
+		593B740A1A44FEC65ECEA2E9FD3DD41A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01EC37BDFF353E47DDA1CC779760FC1F /* Foundation.framework in Frameworks */,
+				0CAA2F88B8E9E0F7B40C5A9D6F38E617 /* Foundation.framework in Frameworks */,
+				90A459557321A516310EC3B5227DCC31 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2C94B71A8B73CC577821B93A50380038 /* Frameworks */ = {
+		6B230D349C1D08DB398357D9D1BC6C67 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1E3495126E4DDB621A2CE9C7F5733A9 /* Foundation.framework in Frameworks */,
-				E0D35E1D2ADD137F6EAAF2720DF8C16B /* SpriteKit.framework in Frameworks */,
+				1786527B7EE9BDB722D305514EC7DDF5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		958536238EC5DC1A715F30D2EE8B8C3A /* Frameworks */ = {
+		8625186997CF49C93861503662283305 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CA501005C3ED8989F4886FB1926F833 /* Foundation.framework in Frameworks */,
+				97ED24ECE4EA7A3395A0B7E6DE090805 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		05BFE12E6BEECB03665CB8E0217EEFE7 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3D38C895CD407FA1051190ABE38CB87F /* SKInkAnimator */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,120 +127,102 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		21EFA768AD1575BE366E3CF5055D5F68 /* Pods-SKInkAnimator_Tests */ = {
+		4D7BFAAA3896AB8E1CCE5AE59425DD83 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7A4FA3A24431649B8C028354398A1ACA /* Pods-SKInkAnimator_Tests.modulemap */,
-				59130B3C042417C892FB9CCB381D827D /* Pods-SKInkAnimator_Tests-acknowledgements.markdown */,
-				C7A85852A86D44C0CB655CB7A071782C /* Pods-SKInkAnimator_Tests-acknowledgements.plist */,
-				ED2C442B33CED5BF920AB4507D802AF5 /* Pods-SKInkAnimator_Tests-dummy.m */,
-				F38F175387A821375688DF3B066638C6 /* Pods-SKInkAnimator_Tests-Info.plist */,
-				83782788015F31346CF6617058643D45 /* Pods-SKInkAnimator_Tests-umbrella.h */,
-				BFCF9165B8F838E520DC6D6E05E1BAAE /* Pods-SKInkAnimator_Tests.debug.xcconfig */,
-				9E90044A80BCE3DE023131222FA999EC /* Pods-SKInkAnimator_Tests.release.xcconfig */,
-			);
-			name = "Pods-SKInkAnimator_Tests";
-			path = "Target Support Files/Pods-SKInkAnimator_Tests";
-			sourceTree = "<group>";
-		};
-		28E545F88F6ECD8B4CE53BD6384D888B /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				FCDF4EB48469C89E27039D7FA6F5C0D9 /* SKInkAnimator.modulemap */,
-				4B26F1F71E51DDF9E308EFE054B0CAB2 /* SKInkAnimator-dummy.m */,
-				038C8D0ABA89F01ADE8A29F601BF3179 /* SKInkAnimator-Info.plist */,
-				9FE2C36CC753ED0CB7FF5D7E34A1DEA9 /* SKInkAnimator-prefix.pch */,
-				CEC39B0FCD5608AB1A9109BF25A32D86 /* SKInkAnimator-umbrella.h */,
-				615908C11BD1AE8153E13EF24343CC2F /* SKInkAnimator.debug.xcconfig */,
-				315198DD4FC4BB337D0109D82DD85D0B /* SKInkAnimator.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/SKInkAnimator";
-			sourceTree = "<group>";
-		};
-		33F07709225089047488D07B9743E3A3 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				CEDA028B03A4584BD7D3334DAFCC0C38 /* Utils.swift */,
-				7968417A28A42E2CEF2156A227DD69F9 /* XMLParser.swift */,
-			);
-			name = Utils;
-			path = SKInkAnimator/Classes/Utils;
-			sourceTree = "<group>";
-		};
-		3D38C895CD407FA1051190ABE38CB87F /* SKInkAnimator */ = {
-			isa = PBXGroup;
-			children = (
-				7B9CAE9EB86EF39594892D5B4B3BF7B5 /* ActionFactory.swift */,
-				4A234F530C717155AEB009DF35497B94 /* IAAnimation.swift */,
-				9F6630F6232C1D5E22CDECD134254E31 /* IAEntity.swift */,
-				7CBA41209974E90C245E118E6D2770D9 /* IASkin.swift */,
-				EC34523DC9214F04094E1FF85F482CCE /* IASpriteNode.swift */,
-				47895612FAD7510C95EFF115037F1B22 /* Keyframe.swift */,
-				ADB400F1E1BB338A51D23DC5C398A23B /* KeyframeWrapper.swift */,
-				9C7B58A012B24672C71D6BED70D931BF /* Pod */,
-				28E545F88F6ECD8B4CE53BD6384D888B /* Support Files */,
-				33F07709225089047488D07B9743E3A3 /* Utils */,
-			);
-			name = SKInkAnimator;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		524D8B08F98A9FDFA7BEF76694C652E1 /* Pods-SKInkAnimator_Example */ = {
-			isa = PBXGroup;
-			children = (
-				A471B6F6F91CCF8C0E485E86BA90EB69 /* Pods-SKInkAnimator_Example.modulemap */,
-				3BFC06DA4EB7D0CA96F68BEDDEF3AEF9 /* Pods-SKInkAnimator_Example-acknowledgements.markdown */,
-				776644BB42F2E0C2477CF180F64432AE /* Pods-SKInkAnimator_Example-acknowledgements.plist */,
-				29FDA3A65CB22960039F3B7416DA0D1F /* Pods-SKInkAnimator_Example-dummy.m */,
-				C866A2E29DA3048304FB02A7C7F1F92E /* Pods-SKInkAnimator_Example-frameworks.sh */,
-				0D42843957D19D12827129CA315A77C8 /* Pods-SKInkAnimator_Example-Info.plist */,
-				1BE1237589A3C7D2D99E4025A471E13A /* Pods-SKInkAnimator_Example-umbrella.h */,
-				4899DA1E5F6C8F6AD22EB30D1BD355AE /* Pods-SKInkAnimator_Example.debug.xcconfig */,
-				8878D139779BB453D093E06D4D651673 /* Pods-SKInkAnimator_Example.release.xcconfig */,
-			);
-			name = "Pods-SKInkAnimator_Example";
-			path = "Target Support Files/Pods-SKInkAnimator_Example";
-			sourceTree = "<group>";
-		};
-		9C7B58A012B24672C71D6BED70D931BF /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				C24B8E6DA6E3191D15BEEF6D84486D5C /* LICENSE */,
-				B9530EB3B89567448846ACA21537C643 /* README.md */,
-				EC6DBF4A328536AB847461FDBB942442 /* SKInkAnimator.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		BE3AC6B309C82DF7EB1283734B605720 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CB91F069C9CB201C41C67EFECFEC1BFE /* Pods-SKInkAnimator_Example */,
-				FEAD13C435EB30446F6CECDD3E6CE7EB /* Pods-SKInkAnimator_Tests */,
-				295DA71D281C914EB289CDE381BDE4BA /* SKInkAnimator */,
+				BE8F2AF902EBF7D0FE8EB0607F8D2FE7 /* Pods-SKSpriteBuddy_Example */,
+				9EB0B5CD1196381A6ED505BA22985334 /* Pods-SKSpriteBuddy_Tests */,
+				EA08CE599A91F0E9DE52874FB00E7C86 /* SKSpriteBuddy */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C8EE81331E6E93589101E10612B3C065 /* Targets Support Files */ = {
+		5BF172046A2180E02EB027DB4D39A8A6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				524D8B08F98A9FDFA7BEF76694C652E1 /* Pods-SKInkAnimator_Example */,
-				21EFA768AD1575BE366E3CF5055D5F68 /* Pods-SKInkAnimator_Tests */,
+				2C1F083F29E792BEA9E5ECFE35EBFE42 /* Utils.swift */,
+				6FF0AA3739E2D91F260ED38BA4FBA2EC /* XMLParser.swift */,
 			);
-			name = "Targets Support Files";
+			name = Utils;
+			path = SKSpriteBuddy/Classes/Utils;
+			sourceTree = "<group>";
+		};
+		5F644BE199CEA08CDEF9E5CC9344431D /* SKSpriteBuddy */ = {
+			isa = PBXGroup;
+			children = (
+				92E54A990461A00F38EA9EDA098BF7B8 /* ActionFactory.swift */,
+				5D1679A2CF769477960332F9B4389D2A /* IAAnimation.swift */,
+				E9795EF6E211B4B27A3D3470C9365187 /* IAEntity.swift */,
+				FB75CC4EA8D65E982E64C376E8A9A701 /* IASkin.swift */,
+				AACF9B467D59D08B2511946330631B75 /* IASpriteNode.swift */,
+				DE450AD829F57032B51214702455E1D7 /* Keyframe.swift */,
+				F6559A5B0346594F7F53C1C95FDC9F02 /* KeyframeWrapper.swift */,
+				F7DC6B278FD12889F9FB095380D21F40 /* Pod */,
+				A2CBF1461597463E523DEADC7DC0D505 /* Support Files */,
+				5BF172046A2180E02EB027DB4D39A8A6 /* Utils */,
+			);
+			name = SKSpriteBuddy;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		79C24143136ADB487997C2751C60B21D /* Pods-SKSpriteBuddy_Example */ = {
+			isa = PBXGroup;
+			children = (
+				187F2DA5C547BC6CAE10A6896A5B10E7 /* Pods-SKSpriteBuddy_Example.modulemap */,
+				A75F3D98BF3659E7D6896814D4707FB6 /* Pods-SKSpriteBuddy_Example-acknowledgements.markdown */,
+				0B1AE1CE02AD0E7067FB1DA8631E07DD /* Pods-SKSpriteBuddy_Example-acknowledgements.plist */,
+				11CB3890B8534DD7F6CCD758612A1ED8 /* Pods-SKSpriteBuddy_Example-dummy.m */,
+				4B9B78BFC8D9A85C9D9FB958AD5DDB6F /* Pods-SKSpriteBuddy_Example-frameworks.sh */,
+				B5EBBF2C5C19D34EC315691DC418D153 /* Pods-SKSpriteBuddy_Example-Info.plist */,
+				D1EE7DD5F3B4FAF3A6B34488380C3D02 /* Pods-SKSpriteBuddy_Example-umbrella.h */,
+				D6C7501481E5C32887767EA62EB3356C /* Pods-SKSpriteBuddy_Example.debug.xcconfig */,
+				31D5291A5510754EDF33D8892A61C36B /* Pods-SKSpriteBuddy_Example.release.xcconfig */,
+			);
+			name = "Pods-SKSpriteBuddy_Example";
+			path = "Target Support Files/Pods-SKSpriteBuddy_Example";
+			sourceTree = "<group>";
+		};
+		8D75223F99EA43196F23F016455CD44D /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F644BE199CEA08CDEF9E5CC9344431D /* SKSpriteBuddy */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		A2CBF1461597463E523DEADC7DC0D505 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5ADF76DFDC88263AC153F53205B479AD /* SKSpriteBuddy.modulemap */,
+				4119D1B96D6D0A86208EC8CE2AD59FE3 /* SKSpriteBuddy-dummy.m */,
+				8008F5D9A059C1A745CE856536F996C8 /* SKSpriteBuddy-Info.plist */,
+				5681D141B7309426EE0700DEDA0B47CC /* SKSpriteBuddy-prefix.pch */,
+				793AD589508B3DFE1C66680541D8DFF1 /* SKSpriteBuddy-umbrella.h */,
+				423974EBC125E931FDE2575244C44DB6 /* SKSpriteBuddy.debug.xcconfig */,
+				95E290F4A9DABF1952F46A0FD2B22C4E /* SKSpriteBuddy.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SKSpriteBuddy";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				05BFE12E6BEECB03665CB8E0217EEFE7 /* Development Pods */,
+				8D75223F99EA43196F23F016455CD44D /* Development Pods */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				BE3AC6B309C82DF7EB1283734B605720 /* Products */,
-				C8EE81331E6E93589101E10612B3C065 /* Targets Support Files */,
+				4D7BFAAA3896AB8E1CCE5AE59425DD83 /* Products */,
+				D3CAF5FC3FDC7C89F5FAD285FC899E2E /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		D3CAF5FC3FDC7C89F5FAD285FC899E2E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				79C24143136ADB487997C2751C60B21D /* Pods-SKSpriteBuddy_Example */,
+				F9A36D5F2FFF7BC2CE9531975B964EA8 /* Pods-SKSpriteBuddy_Tests */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		E3087FB6CD7134D4DB9812A053828C75 /* iOS */ = {
@@ -260,90 +234,116 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		F7DC6B278FD12889F9FB095380D21F40 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				84D56701653C26B5302BBA980B7D76EF /* LICENSE */,
+				C202847C040CAD010C663F01B2C20A46 /* README.md */,
+				4E3001F643181FBC2F0EE04406E67625 /* SKSpriteBuddy.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		F9A36D5F2FFF7BC2CE9531975B964EA8 /* Pods-SKSpriteBuddy_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3CD296DAF1D131914E6F395AF4D4BBB3 /* Pods-SKSpriteBuddy_Tests.modulemap */,
+				6F0AA99BDB6267BADDD1429F54CCB0E7 /* Pods-SKSpriteBuddy_Tests-acknowledgements.markdown */,
+				9777720E4E82862522040D550789A971 /* Pods-SKSpriteBuddy_Tests-acknowledgements.plist */,
+				74AE9495D133E7FC1DB11C8DAABDB7C4 /* Pods-SKSpriteBuddy_Tests-dummy.m */,
+				0E990F35EBB418856F5852B8786D3FCF /* Pods-SKSpriteBuddy_Tests-Info.plist */,
+				338A0520DDA5B12B1BACB224A383E715 /* Pods-SKSpriteBuddy_Tests-umbrella.h */,
+				EF05AF707156D592CB38B29B7D948BC2 /* Pods-SKSpriteBuddy_Tests.debug.xcconfig */,
+				B15890700B5B0F6C20F610C382AA4367 /* Pods-SKSpriteBuddy_Tests.release.xcconfig */,
+			);
+			name = "Pods-SKSpriteBuddy_Tests";
+			path = "Target Support Files/Pods-SKSpriteBuddy_Tests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3DC698194E020A2A6AAB481B8A529AAD /* Headers */ = {
+		588E7E89B2F0F58FC1F6E5FF3C046FBD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E891A6523687AC8D55BCD0B8C661CFE /* Pods-SKInkAnimator_Tests-umbrella.h in Headers */,
+				E64FEDB194A98347F58D632691CCD5E5 /* Pods-SKSpriteBuddy_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		43EE9197221DD42CC359B68F8DE1A430 /* Headers */ = {
+		A84CED6C0447854A09D479122EA9EB1F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D75423F5175646927A272C2AFAC52D2A /* SKInkAnimator-umbrella.h in Headers */,
+				A26136D105B8BF7CB3F6D5FF4D292F7C /* Pods-SKSpriteBuddy_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD95A325FD49355CC3EE0978A830470F /* Headers */ = {
+		FA370D2734DF710D240C7D05058FBB3D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				046E01D5C04E4FF07A005393C41B4871 /* Pods-SKInkAnimator_Example-umbrella.h in Headers */,
+				57D902D924551BF6474A788E5B5D25B6 /* SKSpriteBuddy-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0C1974F30C6F85E8199354AE91B52498 /* Pods-SKInkAnimator_Tests */ = {
+		099EA5DBAD3E958CA3371A1A0EB12F40 /* Pods-SKSpriteBuddy_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DBC08A00C9B822810CB250900156F47C /* Build configuration list for PBXNativeTarget "Pods-SKInkAnimator_Tests" */;
+			buildConfigurationList = F373D308C2FDE0D358FC0B6E07047E17 /* Build configuration list for PBXNativeTarget "Pods-SKSpriteBuddy_Tests" */;
 			buildPhases = (
-				3DC698194E020A2A6AAB481B8A529AAD /* Headers */,
-				610FE9BE1F288C585ADF2D1AF03FAC28 /* Sources */,
-				958536238EC5DC1A715F30D2EE8B8C3A /* Frameworks */,
-				009B9F3B25C50F4AB94DDDD49964A799 /* Resources */,
+				A84CED6C0447854A09D479122EA9EB1F /* Headers */,
+				C90FEEB6969B3F2E09722469055DF9B3 /* Sources */,
+				8625186997CF49C93861503662283305 /* Frameworks */,
+				689DABD9BD120CDF7C7E638C3F0D080D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				81B80D56CAB701FBEE6A81D78B592E63 /* PBXTargetDependency */,
+				47727F77FCCCFCEB00300755DC66B245 /* PBXTargetDependency */,
 			);
-			name = "Pods-SKInkAnimator_Tests";
-			productName = Pods_SKInkAnimator_Tests;
-			productReference = FEAD13C435EB30446F6CECDD3E6CE7EB /* Pods-SKInkAnimator_Tests */;
+			name = "Pods-SKSpriteBuddy_Tests";
+			productName = Pods_SKSpriteBuddy_Tests;
+			productReference = 9EB0B5CD1196381A6ED505BA22985334 /* Pods-SKSpriteBuddy_Tests */;
 			productType = "com.apple.product-type.framework";
 		};
-		924686BB8900D2CB07C02C41D7FB36F7 /* Pods-SKInkAnimator_Example */ = {
+		B222BF1134E9652034A93AA16BE47ACC /* Pods-SKSpriteBuddy_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2AF200DDA554C11AEA0AE3FB725A79E7 /* Build configuration list for PBXNativeTarget "Pods-SKInkAnimator_Example" */;
+			buildConfigurationList = 3710729F06DFDD047F3C44ECB896D407 /* Build configuration list for PBXNativeTarget "Pods-SKSpriteBuddy_Example" */;
 			buildPhases = (
-				FD95A325FD49355CC3EE0978A830470F /* Headers */,
-				55A5588D4CDFF668092C3F64C1EF5FDE /* Sources */,
-				20C32CD578B562D973D083A28552D933 /* Frameworks */,
-				37F4E8C42BA550D1531FE7C2EB8584B9 /* Resources */,
+				588E7E89B2F0F58FC1F6E5FF3C046FBD /* Headers */,
+				BF2CB7B65D58596475BDBE81844C69B7 /* Sources */,
+				6B230D349C1D08DB398357D9D1BC6C67 /* Frameworks */,
+				4C4586B06505F3EC3DB77F2894C00C44 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7DEE3C92744C7E011E5BF37595C9B930 /* PBXTargetDependency */,
+				D374CF2AC4479FCDC1D840A7B8C70127 /* PBXTargetDependency */,
 			);
-			name = "Pods-SKInkAnimator_Example";
-			productName = Pods_SKInkAnimator_Example;
-			productReference = CB91F069C9CB201C41C67EFECFEC1BFE /* Pods-SKInkAnimator_Example */;
+			name = "Pods-SKSpriteBuddy_Example";
+			productName = Pods_SKSpriteBuddy_Example;
+			productReference = BE8F2AF902EBF7D0FE8EB0607F8D2FE7 /* Pods-SKSpriteBuddy_Example */;
 			productType = "com.apple.product-type.framework";
 		};
-		F1ED2A1ECB0BFD73856B9CB2DCE9049B /* SKInkAnimator */ = {
+		E5E7608EEFAC4DAC2F247CE61AB7FB77 /* SKSpriteBuddy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1EC9381F04352308837D6736C25F762B /* Build configuration list for PBXNativeTarget "SKInkAnimator" */;
+			buildConfigurationList = 21444546DB0183DDCB082C9E227E1E4C /* Build configuration list for PBXNativeTarget "SKSpriteBuddy" */;
 			buildPhases = (
-				43EE9197221DD42CC359B68F8DE1A430 /* Headers */,
-				7C6AD540F788B718DD409F5E8EDD42E0 /* Sources */,
-				2C94B71A8B73CC577821B93A50380038 /* Frameworks */,
-				F00D31BD8DD3EFA3B4C8ED61182AFEFF /* Resources */,
+				FA370D2734DF710D240C7D05058FBB3D /* Headers */,
+				3D27F9D1D9A10DBF6AEC9F3D9B0F7A58 /* Sources */,
+				593B740A1A44FEC65ECEA2E9FD3DD41A /* Frameworks */,
+				1DB6BAC720816E8BDBEFED12532B1FC8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SKInkAnimator;
-			productName = SKInkAnimator;
-			productReference = 295DA71D281C914EB289CDE381BDE4BA /* SKInkAnimator */;
+			name = SKSpriteBuddy;
+			productName = SKSpriteBuddy;
+			productReference = EA08CE599A91F0E9DE52874FB00E7C86 /* SKSpriteBuddy */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -352,8 +352,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -364,33 +364,33 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = BE3AC6B309C82DF7EB1283734B605720 /* Products */;
+			productRefGroup = 4D7BFAAA3896AB8E1CCE5AE59425DD83 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				924686BB8900D2CB07C02C41D7FB36F7 /* Pods-SKInkAnimator_Example */,
-				0C1974F30C6F85E8199354AE91B52498 /* Pods-SKInkAnimator_Tests */,
-				F1ED2A1ECB0BFD73856B9CB2DCE9049B /* SKInkAnimator */,
+				B222BF1134E9652034A93AA16BE47ACC /* Pods-SKSpriteBuddy_Example */,
+				099EA5DBAD3E958CA3371A1A0EB12F40 /* Pods-SKSpriteBuddy_Tests */,
+				E5E7608EEFAC4DAC2F247CE61AB7FB77 /* SKSpriteBuddy */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		009B9F3B25C50F4AB94DDDD49964A799 /* Resources */ = {
+		1DB6BAC720816E8BDBEFED12532B1FC8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		37F4E8C42BA550D1531FE7C2EB8584B9 /* Resources */ = {
+		4C4586B06505F3EC3DB77F2894C00C44 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F00D31BD8DD3EFA3B4C8ED61182AFEFF /* Resources */ = {
+		689DABD9BD120CDF7C7E638C3F0D080D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -400,61 +400,62 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		55A5588D4CDFF668092C3F64C1EF5FDE /* Sources */ = {
+		3D27F9D1D9A10DBF6AEC9F3D9B0F7A58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8988466EA28951D8631541BA418F5EE /* Pods-SKInkAnimator_Example-dummy.m in Sources */,
+				53397E5BECAC75361AD61F8318ECB35B /* ActionFactory.swift in Sources */,
+				30D497A8749102815C7388C96E743D76 /* IAAnimation.swift in Sources */,
+				F4A4E6B331B830B76103C7C5EEEE4924 /* IAEntity.swift in Sources */,
+				5BD0ACBC1C93BE94822A9746941383D6 /* IASkin.swift in Sources */,
+				E4D32D9336BFEAF16D542D53E1757ED8 /* IASpriteNode.swift in Sources */,
+				7440A032C288DF1083EA9A9DB2398078 /* Keyframe.swift in Sources */,
+				32BE178A3D06DD0A55ACE5ABAFF63375 /* KeyframeWrapper.swift in Sources */,
+				F67D43A79543053D5B7FEDEDE656429C /* SKSpriteBuddy-dummy.m in Sources */,
+				C9E0DDDA551F935836C9DC337990BAFC /* Utils.swift in Sources */,
+				D9854A91C9343C8E0C7B947082735956 /* XMLParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		610FE9BE1F288C585ADF2D1AF03FAC28 /* Sources */ = {
+		BF2CB7B65D58596475BDBE81844C69B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A2AD67897FC4100C7AF4C4A7F511601 /* Pods-SKInkAnimator_Tests-dummy.m in Sources */,
+				D20262763678D18213A1B3A4EBD173E3 /* Pods-SKSpriteBuddy_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7C6AD540F788B718DD409F5E8EDD42E0 /* Sources */ = {
+		C90FEEB6969B3F2E09722469055DF9B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FA654E95C8159F639FC594386E96029 /* ActionFactory.swift in Sources */,
-				9E798EF6EE5E98DB4F936703E370DFA9 /* IAAnimation.swift in Sources */,
-				80F7DFDD766EDDAB1C480B9CBF16A08F /* IAEntity.swift in Sources */,
-				ABF4A9F0E0C2486C96EE4A09086E5FA4 /* IASkin.swift in Sources */,
-				D9138F1485AA75473241E558B3C8D88C /* IASpriteNode.swift in Sources */,
-				D96B61C40F99A5387955F9C4F8042F4E /* Keyframe.swift in Sources */,
-				E6F240441CB64E802662BC6D111D9955 /* KeyframeWrapper.swift in Sources */,
-				64D152BB176BBED01EA2B1A94F20D545 /* SKInkAnimator-dummy.m in Sources */,
-				A4F10F329DF3E7C2EB1776D6C3F9CABB /* Utils.swift in Sources */,
-				320927FFFE678B259ACE9204A990A529 /* XMLParser.swift in Sources */,
+				0FF25677AF4B7D5C56593E10FAF4D151 /* Pods-SKSpriteBuddy_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7DEE3C92744C7E011E5BF37595C9B930 /* PBXTargetDependency */ = {
+		47727F77FCCCFCEB00300755DC66B245 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SKInkAnimator;
-			target = F1ED2A1ECB0BFD73856B9CB2DCE9049B /* SKInkAnimator */;
-			targetProxy = 9B6F82548FEA1D8B068D466DD078B892 /* PBXContainerItemProxy */;
+			name = "Pods-SKSpriteBuddy_Example";
+			target = B222BF1134E9652034A93AA16BE47ACC /* Pods-SKSpriteBuddy_Example */;
+			targetProxy = 51515EB1A97EDCF14B090329D25207A3 /* PBXContainerItemProxy */;
 		};
-		81B80D56CAB701FBEE6A81D78B592E63 /* PBXTargetDependency */ = {
+		D374CF2AC4479FCDC1D840A7B8C70127 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-SKInkAnimator_Example";
-			target = 924686BB8900D2CB07C02C41D7FB36F7 /* Pods-SKInkAnimator_Example */;
-			targetProxy = 335BC5CB1314C21017E33BA2D2B78317 /* PBXContainerItemProxy */;
+			name = SKSpriteBuddy;
+			target = E5E7608EEFAC4DAC2F247CE61AB7FB77 /* SKSpriteBuddy */;
+			targetProxy = CE12287EA0D12055CB8449DF1D352012 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1B473AF0FC0843EF673236BFD29AF669 /* Release */ = {
+		0ED3240E790B8FDABCD18702C4E7C4DF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 315198DD4FC4BB337D0109D82DD85D0B /* SKInkAnimator.release.xcconfig */;
+			baseConfigurationReference = EF05AF707156D592CB38B29B7D948BC2 /* Pods-SKSpriteBuddy_Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -465,24 +466,24 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SKInkAnimator/SKInkAnimator-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SKInkAnimator/SKInkAnimator-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-SKSpriteBuddy_Tests/Pods-SKSpriteBuddy_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SKInkAnimator/SKInkAnimator.modulemap";
-				PRODUCT_MODULE_NAME = SKInkAnimator;
-				PRODUCT_NAME = SKInkAnimator;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SKSpriteBuddy_Tests/Pods-SKSpriteBuddy_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		30E0B9EFD9A5C45D0D351231E81B30B3 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -546,9 +547,9 @@
 			};
 			name = Release;
 		};
-		6168E3521A603038C9D85FA6DA9C5E94 /* Debug */ = {
+		7AD6BA38307FD61E03C923D82290F4C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BFCF9165B8F838E520DC6D6E05E1BAAE /* Pods-SKInkAnimator_Tests.debug.xcconfig */;
+			baseConfigurationReference = D6C7501481E5C32887767EA62EB3356C /* Pods-SKSpriteBuddy_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -561,12 +562,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SKInkAnimator_Tests/Pods-SKInkAnimator_Tests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-SKSpriteBuddy_Example/Pods-SKSpriteBuddy_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SKInkAnimator_Tests/Pods-SKInkAnimator_Tests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-SKSpriteBuddy_Example/Pods-SKSpriteBuddy_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -580,9 +581,74 @@
 			};
 			name = Debug;
 		};
-		74F435D4F45E2FBFFDE2894565FB9383 /* Release */ = {
+		8F76D901D4FE480EF4E4795C71055AF5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8878D139779BB453D093E06D4D651673 /* Pods-SKInkAnimator_Example.release.xcconfig */;
+			baseConfigurationReference = 95E290F4A9DABF1952F46A0FD2B22C4E /* SKSpriteBuddy.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SKSpriteBuddy/SKSpriteBuddy-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SKSpriteBuddy/SKSpriteBuddy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SKSpriteBuddy/SKSpriteBuddy.modulemap";
+				PRODUCT_MODULE_NAME = SKSpriteBuddy;
+				PRODUCT_NAME = SKSpriteBuddy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9519641904F7E891B00BA80946A31595 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 423974EBC125E931FDE2575244C44DB6 /* SKSpriteBuddy.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SKSpriteBuddy/SKSpriteBuddy-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SKSpriteBuddy/SKSpriteBuddy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SKSpriteBuddy/SKSpriteBuddy.modulemap";
+				PRODUCT_MODULE_NAME = SKSpriteBuddy;
+				PRODUCT_NAME = SKSpriteBuddy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9BFE7AF4AC235AD267C1CE21C6AD1311 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31D5291A5510754EDF33D8892A61C36B /* Pods-SKSpriteBuddy_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -595,12 +661,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SKInkAnimator_Example/Pods-SKInkAnimator_Example-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-SKSpriteBuddy_Example/Pods-SKSpriteBuddy_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SKInkAnimator_Example/Pods-SKInkAnimator_Example.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-SKSpriteBuddy_Example/Pods-SKSpriteBuddy_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -615,9 +681,9 @@
 			};
 			name = Release;
 		};
-		A448C7F86C0D9E0F94F84D76A30A369A /* Debug */ = {
+		A6200FC3CF8971390E00A5AFE1C05B04 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4899DA1E5F6C8F6AD22EB30D1BD355AE /* Pods-SKInkAnimator_Example.debug.xcconfig */;
+			baseConfigurationReference = B15890700B5B0F6C20F610C382AA4367 /* Pods-SKSpriteBuddy_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -630,78 +696,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SKInkAnimator_Example/Pods-SKInkAnimator_Example-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-SKSpriteBuddy_Tests/Pods-SKSpriteBuddy_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SKInkAnimator_Example/Pods-SKInkAnimator_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		BBA0C10245240615D23AF7564B9F446C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 615908C11BD1AE8153E13EF24343CC2F /* SKInkAnimator.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SKInkAnimator/SKInkAnimator-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SKInkAnimator/SKInkAnimator-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SKInkAnimator/SKInkAnimator.modulemap";
-				PRODUCT_MODULE_NAME = SKInkAnimator;
-				PRODUCT_NAME = SKInkAnimator;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		BF061C42293280293A09D975F6F57460 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E90044A80BCE3DE023131222FA999EC /* Pods-SKInkAnimator_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SKInkAnimator_Tests/Pods-SKInkAnimator_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SKInkAnimator_Tests/Pods-SKInkAnimator_Tests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-SKSpriteBuddy_Tests/Pods-SKSpriteBuddy_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -785,20 +785,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1EC9381F04352308837D6736C25F762B /* Build configuration list for PBXNativeTarget "SKInkAnimator" */ = {
+		21444546DB0183DDCB082C9E227E1E4C /* Build configuration list for PBXNativeTarget "SKSpriteBuddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BBA0C10245240615D23AF7564B9F446C /* Debug */,
-				1B473AF0FC0843EF673236BFD29AF669 /* Release */,
+				9519641904F7E891B00BA80946A31595 /* Debug */,
+				8F76D901D4FE480EF4E4795C71055AF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2AF200DDA554C11AEA0AE3FB725A79E7 /* Build configuration list for PBXNativeTarget "Pods-SKInkAnimator_Example" */ = {
+		3710729F06DFDD047F3C44ECB896D407 /* Build configuration list for PBXNativeTarget "Pods-SKSpriteBuddy_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A448C7F86C0D9E0F94F84D76A30A369A /* Debug */,
-				74F435D4F45E2FBFFDE2894565FB9383 /* Release */,
+				7AD6BA38307FD61E03C923D82290F4C4 /* Debug */,
+				9BFE7AF4AC235AD267C1CE21C6AD1311 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -812,11 +812,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DBC08A00C9B822810CB250900156F47C /* Build configuration list for PBXNativeTarget "Pods-SKInkAnimator_Tests" */ = {
+		F373D308C2FDE0D358FC0B6E07047E17 /* Build configuration list for PBXNativeTarget "Pods-SKSpriteBuddy_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6168E3521A603038C9D85FA6DA9C5E94 /* Debug */,
-				BF061C42293280293A09D975F6F57460 /* Release */,
+				0ED3240E790B8FDABCD18702C4E7C4DF /* Debug */,
+				A6200FC3CF8971390E00A5AFE1C05B04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
